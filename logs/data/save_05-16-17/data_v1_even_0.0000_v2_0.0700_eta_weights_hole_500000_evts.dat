@@ -1,0 +1,57 @@
+====================
+nevents:    25000
+Rapidity-even v1:  0
+setv2:     0.07
+Using eta-dependent weights...
+Holes in detector acceptance... 
+iseed:    1246
+offsets: HFm	0	0	0	0
+offsets: trackm	0	0	0	0
+offsets: trackp	0	0	0	0
+offsets: HFp	0	0	0	0
+offsets: trkmid	0	0	0	0
+   -----            
+nevts:              25000
+evtmult:            6564
+ncount (HFm):       5699301
+ncount (HFp):       5628389
+   -----            
+HFm mult:           673
+trackm mult:        232
+trackmid mult:      449
+trackp mult:        217
+HFp mult:           686
+particles rejected: 4756
+   -----            
+rescor1_2:          0.065494
+rescor1_3    (HFm): 0.117239	 (HFp): 0.098315
+rescor2_2:          0.913318
+rescor2_3    (HFm): 0.912378	 (HFp): 0.912378
+rescorMix    (HFm): 0.094852	 (HFp): 0.094852
+epv1obs      (HFm): 0.000096	 (HFp): 0.000150
+epv1obs_mix  (HFm): 0.000302	 (HFp): 0.000353
+epv2obs      (HFm): 0.063542	 (HFp): 0.063750
+   -----            
+spdenom1_2SE:       0.002536
+spdenom1_3SE (HFm): 0.005453	 (HFp): 0.002037
+spdenom2_2SE:       0.069948
+spdenom2_3SE (HFm): 0.069658	 (HFp): 0.069658
+spdenom_mix  (HFm): 0.000226	 (HFp): 0.000226
+spv1num      (HFm): 0.000006	 (HFp): 0.000002
+spv2num      (HFm): 0.004848	 (HFp): 0.004873
+spv1num_mix  (HFm): 0.000002	 (HFp): 0.000000
+   -----               
+epv1_2SE     (HFm): 0.001468	 (HFp): 0.002293
+epv1_3SE     (HFm): 0.000820	 (HFp): 0.001528
+epv1_mix     (HFm): 0.003182	 (HFp): 0.003725
+   -----            
+spv1_2SE     (HFm): 0.002426	 (HFp): 0.000811
+spv1_3SE     (HFm): 0.001129	 (HFp): 0.001010
+spv1_mix     (HFm): 0.008461	 (HFp): 0.001224
+   -----            
+epv2_2SE     (HFm): 0.069573	 (HFp): 0.069801
+epv2_3SE     (HFm): 0.069645	 (HFp): 0.069872
+spv2_2SE     (HFm): 0.069302	 (HFp): 0.069672
+spv2_3SE     (HFm): 0.069591	 (HFp): 0.069963
+   -----          
+

@@ -1,0 +1,75 @@
+====================
+nevents:    2000
+Rapidity-even v1:  0
+Input v2:     0.07
+Input v3:     0.03
+Using eta-dependent weights...
+Conserving transverse momentum event by event... 
+iseed:    95733
+offsets: HFm	0	0	0	0
+offsets: trackm	0	0	0	0
+offsets: trackp	0	0	0	0
+offsets: HFp	0	0	0	0
+offsets: trkmid	0	0	0	0
+   -----             
+nevts:               2000
+evtmult:             6564
+ncount (HFm):        381317
+ncount (HFp):        381385
+   -----             
+HFm mult:            688
+trackm mult:         181
+trackmid mult:       481
+trackp mult:         191
+HFp mult:            684
+particles rejected:  4339
+   -----             
+rescor1_2:           0.169508
+rescor1_3     (HFm): 0.123420	 (HFp): 0.190622
+rescor2HF_2:           0.917418
+rescor2HF_3     (HFm): 0.917572	 (HFp): 0.917572
+rescor3HF_2:           0.600394
+rescor3HF_3     (HFm): 0.621674	 (HFp): 0.621674
+rescorMix     (HFm): 0.136951	 (HFp): 0.136951
+rescorMix_3   (HFm): 0.305561	 (HFp): 0.305561
+epv1obs       (HFm): -0.001147	 (HFp): 0.000137
+epv1obs_mix   (HFm): -0.000728	 (HFp): 0.000137
+epv1obs_mix_3 (HFm): 0.000440	 (HFp): 0.000594
+epv2obs       (HFm): 0.065762	 (HFp): 0.064149
+epv3obs       (HFm): 0.017376	 (HFp): 0.017722
+   -----             
+spdenom1_2SE:        0.006641
+spdenom1_3SE  (HFm): 0.005247	 (HFp): 0.010891
+SPdenom2HF_2SE:        0.070401
+SPdenom2HF_3SE  (HFm): 0.070017	 (HFp): 0.070017
+SPdenom3HF_2SE:        0.029874
+SPdenom3HF_3SE  (HFm): 0.030891	 (HFp): 0.030891
+spdenom_mix   (HFm): 0.000327	 (HFp): 0.000327
+spdenom_mix_3 (HFm): 0.003737	 (HFp): 0.003737
+spv1num       (HFm): -0.000038	 (HFp): 0.000030
+spv2num       (HFm): 0.005044	 (HFp): 0.004858
+spv3num       (HFm): 0.000889	 (HFp): 0.000877
+spv1num_mix   (HFm): -0.000001	 (HFp): 0.000000
+spv1num_mix_3 (HFm): -0.000004	 (HFp): 0.000002
+   -----             
+epv1_2SE      (HFm): -0.006768	 (HFp): 0.000810
+epv1_3SE      (HFm): -0.009295	 (HFp): 0.000720
+epv1_mix      (HFm): -0.005318	 (HFp): 0.000998
+epv1_mix_3    (HFm): 0.001441	 (HFp): 0.001943
+   -----             
+spv1_2SE      (HFm): -0.005796	 (HFp): 0.004535
+spv1_3SE      (HFm): -0.007335	 (HFp): 0.002765
+spv1_mix      (HFm): -0.003941	 (HFp): 0.001218
+spv1_mix_3    (HFm): -0.001104	 (HFp): 0.000652
+   -----             
+epv2_2SE      (HFm): 0.071682	 (HFp): 0.069923
+epv2_3SE      (HFm): 0.071670	 (HFp): 0.069912
+spv2_2SE      (HFm): 0.071651	 (HFp): 0.069003
+spv2_3SE      (HFm): 0.072044	 (HFp): 0.069382
+   -----             
+epv3_2SE      (HFm): 0.028941	 (HFp): 0.029518
+epv3_3SE      (HFm): 0.027951	 (HFp): 0.028508
+spv3_2SE      (HFm): 0.029762	 (HFp): 0.029366
+spv3_3SE      (HFm): 0.028782	 (HFp): 0.028399
+   -----             
+

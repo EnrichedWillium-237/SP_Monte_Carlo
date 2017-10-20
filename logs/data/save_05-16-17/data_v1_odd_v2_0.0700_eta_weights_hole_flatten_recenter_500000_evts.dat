@@ -1,0 +1,57 @@
+====================
+nevents:    25000
+Rapidity-odd v1 input 
+setv2:     0.07
+Using eta-dependent weights...
+Holes in detector acceptance... 
+iseed:    1246
+offsets: HFm	0.0393675	-0.072634	0.358129	-0.0258895
+offsets: trackm	2.15341	-1.98751	-0.0558944	2.80901
+offsets: trackp	0.0251994	-0.0493391	0.122216	0.0112078
+offsets: HFp	-0.196975	-0.0416574	0.385932	0.0807673
+offsets: trkmid	2.17861	-2.03685	0.0663216	2.82022
+   -----            
+nevts:              25000
+evtmult:            6564
+ncount (HFm):       5699301
+ncount (HFp):       5628377
+   -----            
+HFm mult:           673
+trackm mult:        232
+trackmid mult:      449
+trackp mult:        217
+HFp mult:           686
+particles rejected: 4756
+   -----            
+rescor1_2:          0.427602
+rescor1_3    (HFm): 0.467276	 (HFp): 0.378128
+rescor2_2:          0.913316
+rescor2_3    (HFm): 0.912748	 (HFp): 0.912748
+rescorMix    (HFm): 0.385540	 (HFp): 0.385540
+epv1obs      (HFm): 0.000946	 (HFp): -0.000687
+epv1obs_mix  (HFm): 0.000926	 (HFp): -0.000360
+epv2obs      (HFm): 0.063544	 (HFp): 0.063770
+   -----            
+spdenom1_2SE:       0.020152
+spdenom1_3SE (HFm): 0.024515	 (HFp): 0.019630
+spdenom2_2SE:       0.069954
+spdenom2_3SE (HFm): 0.069674	 (HFp): 0.069674
+spdenom_mix  (HFm): 0.001416	 (HFp): 0.001416
+spv1num      (HFm): 0.000041	 (HFp): -0.000026
+spv2num      (HFm): 0.004848	 (HFp): 0.004874
+spv1num_mix  (HFm): 0.000004	 (HFp): -0.000002
+   -----               
+epv1_2SE     (HFm): 0.002213	 (HFp): -0.001607
+epv1_3SE     (HFm): 0.002025	 (HFp): -0.001817
+epv1_mix     (HFm): 0.002401	 (HFp): -0.000933
+   -----            
+spv1_2SE     (HFm): 0.002033	 (HFp): -0.001304
+spv1_3SE     (HFm): 0.001671	 (HFp): -0.001338
+spv1_mix     (HFm): 0.003163	 (HFp): -0.001443
+   -----            
+epv2_2SE     (HFm): 0.069575	 (HFp): 0.069823
+epv2_3SE     (HFm): 0.069618	 (HFp): 0.069866
+spv2_2SE     (HFm): 0.069303	 (HFp): 0.069678
+spv2_3SE     (HFm): 0.069581	 (HFp): 0.069957
+   -----          
+

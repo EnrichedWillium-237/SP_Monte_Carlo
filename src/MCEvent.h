@@ -18,6 +18,7 @@ public:
     void GetStaticEta(Double_t value, Double_t etaTrackArray[]);
     void GetEtaRandom(Double_t etaTrackArray[], Double_t etamin, Double_t etamax);
     void GetStaticPt(Double_t value, Double_t ptTrackArray[]);
+    void GetPtDist(Double_t ptTrackArray[]);
     void GetPtRandom(Double_t ptTrackArray[]);
     void Setv1(Double_t value);
     void Setv2(Double_t value);
@@ -110,10 +111,15 @@ void MCEvent::GetStaticPt(Double_t value, Double_t ptTrackArray[]) {
     }
 }
 
+void MCEvent::GetPtDist(Double_t ptTrackArray[]) {
+    for (Int_t i = 0; i<mult; i++) {
+        ptTrackArray[i] = ptdist->GetRandom();
+    }
+}
+
 void MCEvent::GetPtRandom(Double_t ptTrackArray[]) {
     for (Int_t i = 0; i<mult; i++) {
         ptTrackArray[i] = ran->Uniform(0.1,7.8);
-//        ptTrackArray[i] = ptdist->GetRandom();
     }
 }
 

@@ -1,0 +1,58 @@
+====================
+nevents:    25000
+Rapidity-even v1:  0
+setv2:     0.07
+Using eta-dependent weights...
+Conserving transverse momentum event by event... 
+Holes in detector acceptance... 
+iseed:    1246
+offsets: HFm	0.0834117	-0.0702894	0.3526	-0.0310389
+offsets: trackm	2.14865	-1.98899	-0.041895	2.80735
+offsets: trackp	0.0353274	-0.0459619	0.118489	0.0151822
+offsets: HFp	-0.174214	-0.0412666	0.39075	0.080208
+offsets: trkmid	2.18398	-2.03495	0.0765939	2.82254
+   -----            
+nevts:              25000
+evtmult:            6564
+ncount (HFm):       5700447
+ncount (HFp):       5629843
+   -----            
+HFm mult:           679
+trackm mult:        238
+trackmid mult:      454
+trackp mult:        216
+HFp mult:           692
+particles rejected: 4739
+   -----            
+rescor1_2:          0.066354
+rescor1_3    (HFm): 0.108555	 (HFp): 0.035328
+rescor2_2:          0.913556
+rescor2_3    (HFm): 0.913067	 (HFp): 0.913067
+rescorMix    (HFm): 0.047123	 (HFp): 0.047123
+epv1obs      (HFm): -0.000211	 (HFp): 0.000094
+epv1obs_mix  (HFm): 0.000403	 (HFp): -0.000047
+epv2obs      (HFm): 0.063611	 (HFp): 0.063778
+   -----            
+spdenom1_2SE:       0.002907
+spdenom1_3SE (HFm): 0.004230	 (HFp): 0.004467
+spdenom2_2SE:       0.069930
+spdenom2_3SE (HFm): 0.069642	 (HFp): 0.069642
+spdenom_mix  (HFm): 0.000138	 (HFp): 0.000138
+spv1num      (HFm): -0.000005	 (HFp): 0.000009
+spv2num      (HFm): 0.004849	 (HFp): 0.004871
+spv1num_mix  (HFm): 0.000002	 (HFp): -0.000001
+   -----               
+epv1_2SE     (HFm): -0.003178	 (HFp): 0.001412
+epv1_3SE     (HFm): -0.001943	 (HFp): 0.002651
+epv1_mix     (HFm): 0.008552	 (HFp): -0.001004
+   -----            
+spv1_2SE     (HFm): -0.001576	 (HFp): 0.003099
+spv1_3SE     (HFm): -0.001083	 (HFp): 0.002017
+spv1_mix     (HFm): 0.012633	 (HFp): -0.003708
+   -----            
+epv2_2SE     (HFm): 0.069630	 (HFp): 0.069813
+epv2_3SE     (HFm): 0.069667	 (HFp): 0.069850
+spv2_2SE     (HFm): 0.069344	 (HFp): 0.069660
+spv2_3SE     (HFm): 0.069630	 (HFp): 0.069947
+   -----          
+

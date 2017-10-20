@@ -1,0 +1,1406 @@
+
+Processing v1MC.C++...
+Info in <TUnixSystem::ACLiC>: creating shared library /home/w955m639/v1flow/Monte_Carlo/new_build/./v1MC_C.so
+Rapidity-odd input v1
+Input v2: 0.07
+Using eta-dependent weighting... 
+Using pt-dependent weighting... 
+Conserving transverse momentum event by event... 
+Running 500000 events over 20 runs (25000 per run) 
+
+Entering primary event loop
+ event: 1250/25000	run: 1/20
+ event: 2500/25000	run: 1/20
+ event: 3750/25000	run: 1/20
+ event: 5000/25000	run: 1/20
+ event: 6250/25000	run: 1/20
+ event: 7500/25000	run: 1/20
+ event: 8750/25000	run: 1/20
+ event: 10000/25000	run: 1/20
+ event: 11250/25000	run: 1/20
+ event: 12500/25000	run: 1/20
+ event: 13750/25000	run: 1/20
+ event: 15000/25000	run: 1/20
+ event: 16250/25000	run: 1/20
+ event: 17500/25000	run: 1/20
+ event: 18750/25000	run: 1/20
+ event: 20000/25000	run: 1/20
+ event: 21250/25000	run: 1/20
+ event: 22500/25000	run: 1/20
+ event: 23750/25000	run: 1/20
+ event: 25000/25000	run: 1/20
+   -----            
+nevts:              25000
+evtmult:            6564
+ncount (HFm):       5701419
+ncount (HFp):       5703176
+   -----            
+HFm mult:           634
+trackm mult:        225
+trackmid mult:      448
+trackp mult:        223
+HFp mult:           691
+particles rejected: 4791
+   -----            
+rescor1_2:          0.214893
+rescor1_3    (HFm): 0.222384	 (HFp): 0.201517
+rescor2_2:          0.912627
+rescor2_3    (HFm): 0.913368	 (HFp): 0.913368
+rescorMix    (HFm): 0.196549	 (HFp): 0.196549
+epv1obs      (HFm): 0.002939	 (HFp): -0.003008
+epv1obs_mix  (HFm): 0.000236	 (HFp): -0.000469
+epv2obs      (HFm): 0.064103	 (HFp): 0.063923
+   -----            
+spdenom1_2SE:       0.018940
+spdenom1_3SE (HFm): 0.018875	 (HFp): 0.017202
+spdenom2_2SE:       0.069923
+spdenom2_3SE (HFm): 0.070029	 (HFp): 0.070029
+spdenom_mix  (HFm): 0.001223	 (HFp): 0.001223
+spv1num      (HFm): -0.000271	 (HFp): 0.000266
+spv2num      (HFm): 0.004908	 (HFp): 0.004901
+spv1num_mix  (HFm): -0.000002	 (HFp): 0.000003
+   -----               
+epv1_2SE     (HFm): 0.013676	 (HFp): -0.013998
+epv1_3SE     (HFm): 0.013216	 (HFp): -0.014927
+epv1_mix     (HFm): 0.001199	 (HFp): -0.002388
+   -----            
+spv1_2SE     (HFm): -0.014286	 (HFp): 0.014030
+spv1_3SE     (HFm): -0.014336	 (HFp): 0.015448
+spv1_mix     (HFm): -0.001693	 (HFp): 0.002547
+   -----            
+epv2_2SE     (HFm): 0.070240	 (HFp): 0.070043
+epv2_3SE     (HFm): 0.070183	 (HFp): 0.069986
+spv2_2SE     (HFm): 0.070191	 (HFp): 0.070091
+spv2_3SE     (HFm): 0.070084	 (HFp): 0.069985
+   -----          
+
+Entering primary event loop
+ event: 1250/25000	run: 2/20
+ event: 2500/25000	run: 2/20
+ event: 3750/25000	run: 2/20
+ event: 5000/25000	run: 2/20
+ event: 6250/25000	run: 2/20
+ event: 7500/25000	run: 2/20
+ event: 8750/25000	run: 2/20
+ event: 10000/25000	run: 2/20
+ event: 11250/25000	run: 2/20
+ event: 12500/25000	run: 2/20
+ event: 13750/25000	run: 2/20
+ event: 15000/25000	run: 2/20
+ event: 16250/25000	run: 2/20
+ event: 17500/25000	run: 2/20
+ event: 18750/25000	run: 2/20
+ event: 20000/25000	run: 2/20
+ event: 21250/25000	run: 2/20
+ event: 22500/25000	run: 2/20
+ event: 23750/25000	run: 2/20
+ event: 25000/25000	run: 2/20
+   -----            
+nevts:              25000
+evtmult:            6564
+ncount (HFm):       5698466
+ncount (HFp):       5704185
+   -----            
+HFm mult:           688
+trackm mult:        225
+trackmid mult:      464
+trackp mult:        239
+HFp mult:           671
+particles rejected: 4741
+   -----            
+rescor1_2:          0.200909
+rescor1_3    (HFm): 0.193647	 (HFp): 0.206056
+rescor2_2:          0.912833
+rescor2_3    (HFm): 0.911368	 (HFp): 0.911368
+rescorMix    (HFm): 0.210955	 (HFp): 0.210955
+epv1obs      (HFm): 0.002639	 (HFp): -0.002856
+epv1obs_mix  (HFm): 0.000323	 (HFp): -0.000380
+epv2obs      (HFm): 0.063082	 (HFp): 0.063987
+   -----            
+spdenom1_2SE:       0.018366
+spdenom1_3SE (HFm): 0.017489	 (HFp): 0.018632
+spdenom2_2SE:       0.069807
+spdenom2_3SE (HFm): 0.069844	 (HFp): 0.069844
+spdenom_mix  (HFm): 0.001393	 (HFp): 0.001393
+spv1num      (HFm): -0.000238	 (HFp): 0.000251
+spv2num      (HFm): 0.004817	 (HFp): 0.004901
+spv1num_mix  (HFm): -0.000004	 (HFp): 0.000002
+   -----               
+epv1_2SE     (HFm): 0.013136	 (HFp): -0.014217
+epv1_3SE     (HFm): 0.013629	 (HFp): -0.013862
+epv1_mix     (HFm): 0.001531	 (HFp): -0.001803
+   -----            
+spv1_2SE     (HFm): -0.012967	 (HFp): 0.013650
+spv1_3SE     (HFm): -0.013617	 (HFp): 0.013456
+spv1_mix     (HFm): -0.002572	 (HFp): 0.001793
+   -----            
+epv2_2SE     (HFm): 0.069106	 (HFp): 0.070098
+epv2_3SE     (HFm): 0.069217	 (HFp): 0.070210
+spv2_2SE     (HFm): 0.069011	 (HFp): 0.070210
+spv2_3SE     (HFm): 0.068975	 (HFp): 0.070173
+   -----          
+
+Entering primary event loop
+ event: 1250/25000	run: 3/20
+ event: 2500/25000	run: 3/20
+ event: 3750/25000	run: 3/20
+ event: 5000/25000	run: 3/20
+ event: 6250/25000	run: 3/20
+ event: 7500/25000	run: 3/20
+ event: 8750/25000	run: 3/20
+ event: 10000/25000	run: 3/20
+ event: 11250/25000	run: 3/20
+ event: 12500/25000	run: 3/20
+ event: 13750/25000	run: 3/20
+ event: 15000/25000	run: 3/20
+ event: 16250/25000	run: 3/20
+ event: 17500/25000	run: 3/20
+ event: 18750/25000	run: 3/20
+ event: 20000/25000	run: 3/20
+ event: 21250/25000	run: 3/20
+ event: 22500/25000	run: 3/20
+ event: 23750/25000	run: 3/20
+ event: 25000/25000	run: 3/20
+   -----            
+nevts:              25000
+evtmult:            6564
+ncount (HFm):       5701794
+ncount (HFp):       5702763
+   -----            
+HFm mult:           716
+trackm mult:        225
+trackmid mult:      454
+trackp mult:        229
+HFp mult:           648
+particles rejected: 4746
+   -----            
+rescor1_2:          0.198479
+rescor1_3    (HFm): 0.181844	 (HFp): 0.178435
+rescor2_2:          0.912551
+rescor2_3    (HFm): 0.911823	 (HFp): 0.911823
+rescorMix    (HFm): 0.202846	 (HFp): 0.202846
+epv1obs      (HFm): 0.003000	 (HFp): -0.002883
+epv1obs_mix  (HFm): 0.000105	 (HFp): -0.000429
+epv2obs      (HFm): 0.063643	 (HFp): 0.063577
+   -----            
+spdenom1_2SE:       0.018113
+spdenom1_3SE (HFm): 0.017274	 (HFp): 0.016016
+spdenom2_2SE:       0.070274
+spdenom2_3SE (HFm): 0.070101	 (HFp): 0.070101
+spdenom_mix  (HFm): 0.001391	 (HFp): 0.001391
+spv1num      (HFm): -0.000268	 (HFp): 0.000265
+spv2num      (HFm): 0.004881	 (HFp): 0.004893
+spv1num_mix  (HFm): -0.000000	 (HFp): 0.000003
+   -----               
+epv1_2SE     (HFm): 0.015117	 (HFp): -0.014527
+epv1_3SE     (HFm): 0.016500	 (HFp): -0.016159
+epv1_mix     (HFm): 0.000519	 (HFp): -0.002113
+   -----            
+spv1_2SE     (HFm): -0.014794	 (HFp): 0.014615
+spv1_3SE     (HFm): -0.015512	 (HFp): 0.016528
+spv1_mix     (HFm): -0.000172	 (HFp): 0.002403
+   -----            
+epv2_2SE     (HFm): 0.069742	 (HFp): 0.069669
+epv2_3SE     (HFm): 0.069798	 (HFp): 0.069725
+spv2_2SE     (HFm): 0.069456	 (HFp): 0.069624
+spv2_3SE     (HFm): 0.069628	 (HFp): 0.069796
+   -----          
+
+Entering primary event loop
+ event: 1250/25000	run: 4/20
+ event: 2500/25000	run: 4/20
+ event: 3750/25000	run: 4/20
+ event: 5000/25000	run: 4/20
+ event: 6250/25000	run: 4/20
+ event: 7500/25000	run: 4/20
+ event: 8750/25000	run: 4/20
+ event: 10000/25000	run: 4/20
+ event: 11250/25000	run: 4/20
+ event: 12500/25000	run: 4/20
+ event: 13750/25000	run: 4/20
+ event: 15000/25000	run: 4/20
+ event: 16250/25000	run: 4/20
+ event: 17500/25000	run: 4/20
+ event: 18750/25000	run: 4/20
+ event: 20000/25000	run: 4/20
+ event: 21250/25000	run: 4/20
+ event: 22500/25000	run: 4/20
+ event: 23750/25000	run: 4/20
+ event: 25000/25000	run: 4/20
+   -----            
+nevts:              25000
+evtmult:            6564
+ncount (HFm):       5701742
+ncount (HFp):       5704377
+   -----            
+HFm mult:           691
+trackm mult:        223
+trackmid mult:      458
+trackp mult:        235
+HFp mult:           670
+particles rejected: 4745
+   -----            
+rescor1_2:          0.204714
+rescor1_3    (HFm): 0.186181	 (HFp): 0.195564
+rescor2_2:          0.912810
+rescor2_3    (HFm): 0.911728	 (HFp): 0.911728
+rescorMix    (HFm): 0.199278	 (HFp): 0.199278
+epv1obs      (HFm): 0.002866	 (HFp): -0.002949
+epv1obs_mix  (HFm): -0.000066	 (HFp): -0.000324
+epv2obs      (HFm): 0.063705	 (HFp): 0.064167
+   -----            
+spdenom1_2SE:       0.018440
+spdenom1_3SE (HFm): 0.016753	 (HFp): 0.018123
+spdenom2_2SE:       0.070031
+spdenom2_3SE (HFm): 0.070084	 (HFp): 0.070084
+spdenom_mix  (HFm): 0.001353	 (HFp): 0.001353
+spv1num      (HFm): -0.000252	 (HFp): 0.000271
+spv2num      (HFm): 0.004895	 (HFp): 0.004930
+spv1num_mix  (HFm): -0.000001	 (HFp): 0.000004
+   -----               
+epv1_2SE     (HFm): 0.013998	 (HFp): -0.014407
+epv1_3SE     (HFm): 0.015392	 (HFp): -0.015081
+epv1_mix     (HFm): -0.000330	 (HFp): -0.001627
+   -----            
+spv1_2SE     (HFm): -0.013678	 (HFp): 0.014682
+spv1_3SE     (HFm): -0.015055	 (HFp): 0.014939
+spv1_mix     (HFm): -0.000756	 (HFp): 0.002702
+   -----            
+epv2_2SE     (HFm): 0.069790	 (HFp): 0.070296
+epv2_3SE     (HFm): 0.069873	 (HFp): 0.070379
+spv2_2SE     (HFm): 0.069903	 (HFp): 0.070397
+spv2_3SE     (HFm): 0.069851	 (HFp): 0.070344
+   -----          
+
+Entering primary event loop
+ event: 1250/25000	run: 5/20
+ event: 2500/25000	run: 5/20
+ event: 3750/25000	run: 5/20
+ event: 5000/25000	run: 5/20
+ event: 6250/25000	run: 5/20
+ event: 7500/25000	run: 5/20
+ event: 8750/25000	run: 5/20
+ event: 10000/25000	run: 5/20
+ event: 11250/25000	run: 5/20
+ event: 12500/25000	run: 5/20
+ event: 13750/25000	run: 5/20
+ event: 15000/25000	run: 5/20
+ event: 16250/25000	run: 5/20
+ event: 17500/25000	run: 5/20
+ event: 18750/25000	run: 5/20
+ event: 20000/25000	run: 5/20
+ event: 21250/25000	run: 5/20
+ event: 22500/25000	run: 5/20
+ event: 23750/25000	run: 5/20
+ event: 25000/25000	run: 5/20
+   -----            
+nevts:              25000
+evtmult:            6564
+ncount (HFm):       5702088
+ncount (HFp):       5700874
+   -----            
+HFm mult:           688
+trackm mult:        217
+trackmid mult:      463
+trackp mult:        246
+HFp mult:           687
+particles rejected: 4726
+   -----            
+rescor1_2:          0.211436
+rescor1_3    (HFm): 0.207286	 (HFp): 0.217419
+rescor2_2:          0.913217
+rescor2_3    (HFm): 0.913421	 (HFp): 0.913421
+rescorMix    (HFm): 0.190449	 (HFp): 0.190449
+epv1obs      (HFm): 0.002603	 (HFp): -0.002898
+epv1obs_mix  (HFm): 0.000220	 (HFp): -0.000207
+epv2obs      (HFm): 0.064106	 (HFp): 0.063793
+   -----            
+spdenom1_2SE:       0.019630
+spdenom1_3SE (HFm): 0.019575	 (HFp): 0.019169
+spdenom2_2SE:       0.070100
+spdenom2_3SE (HFm): 0.070065	 (HFp): 0.070065
+spdenom_mix  (HFm): 0.001227	 (HFp): 0.001227
+spv1num      (HFm): -0.000242	 (HFp): 0.000267
+spv2num      (HFm): 0.004924	 (HFp): 0.004892
+spv1num_mix  (HFm): -0.000001	 (HFp): 0.000003
+   -----               
+epv1_2SE     (HFm): 0.012312	 (HFp): -0.013705
+epv1_3SE     (HFm): 0.012558	 (HFp): -0.013328
+epv1_mix     (HFm): 0.001157	 (HFp): -0.001085
+   -----            
+spv1_2SE     (HFm): -0.012347	 (HFp): 0.013583
+spv1_3SE     (HFm): -0.012381	 (HFp): 0.013909
+spv1_mix     (HFm): -0.000793	 (HFp): 0.002161
+   -----            
+epv2_2SE     (HFm): 0.070198	 (HFp): 0.069855
+epv2_3SE     (HFm): 0.070182	 (HFp): 0.069840
+spv2_2SE     (HFm): 0.070240	 (HFp): 0.069789
+spv2_3SE     (HFm): 0.070275	 (HFp): 0.069824
+   -----          
+
+Entering primary event loop
+ event: 1250/25000	run: 6/20
+ event: 2500/25000	run: 6/20
+ event: 3750/25000	run: 6/20
+ event: 5000/25000	run: 6/20
+ event: 6250/25000	run: 6/20
+ event: 7500/25000	run: 6/20
+ event: 8750/25000	run: 6/20
+ event: 10000/25000	run: 6/20
+ event: 11250/25000	run: 6/20
+ event: 12500/25000	run: 6/20
+ event: 13750/25000	run: 6/20
+ event: 15000/25000	run: 6/20
+ event: 16250/25000	run: 6/20
+ event: 17500/25000	run: 6/20
+ event: 18750/25000	run: 6/20
+ event: 20000/25000	run: 6/20
+ event: 21250/25000	run: 6/20
+ event: 22500/25000	run: 6/20
+ event: 23750/25000	run: 6/20
+ event: 25000/25000	run: 6/20
+   -----            
+nevts:              25000
+evtmult:            6564
+ncount (HFm):       5700934
+ncount (HFp):       5702392
+   -----            
+HFm mult:           679
+trackm mult:        225
+trackmid mult:      455
+trackp mult:        230
+HFp mult:           680
+particles rejected: 4750
+   -----            
+rescor1_2:          0.195822
+rescor1_3    (HFm): 0.198129	 (HFp): 0.180464
+rescor2_2:          0.912597
+rescor2_3    (HFm): 0.912232	 (HFp): 0.912232
+rescorMix    (HFm): 0.196421	 (HFp): 0.196421
+epv1obs      (HFm): 0.002710	 (HFp): -0.002548
+epv1obs_mix  (HFm): 0.000437	 (HFp): -0.000129
+epv2obs      (HFm): 0.063803	 (HFp): 0.063718
+   -----            
+spdenom1_2SE:       0.018511
+spdenom1_3SE (HFm): 0.018060	 (HFp): 0.017596
+spdenom2_2SE:       0.070007
+spdenom2_3SE (HFm): 0.070058	 (HFp): 0.070058
+spdenom_mix  (HFm): 0.001313	 (HFp): 0.001313
+spv1num      (HFm): -0.000239	 (HFp): 0.000222
+spv2num      (HFm): 0.004893	 (HFp): 0.004889
+spv1num_mix  (HFm): -0.000003	 (HFp): 0.000002
+   -----               
+epv1_2SE     (HFm): 0.013841	 (HFp): -0.013010
+epv1_3SE     (HFm): 0.013680	 (HFp): -0.014118
+epv1_mix     (HFm): 0.002226	 (HFp): -0.000659
+   -----            
+spv1_2SE     (HFm): -0.012910	 (HFp): 0.011984
+spv1_3SE     (HFm): -0.013233	 (HFp): 0.012607
+spv1_mix     (HFm): -0.002478	 (HFp): 0.001811
+   -----            
+epv2_2SE     (HFm): 0.069914	 (HFp): 0.069821
+epv2_3SE     (HFm): 0.069942	 (HFp): 0.069849
+spv2_2SE     (HFm): 0.069899	 (HFp): 0.069839
+spv2_3SE     (HFm): 0.069848	 (HFp): 0.069788
+   -----          
+
+Entering primary event loop
+ event: 1250/25000	run: 7/20
+ event: 2500/25000	run: 7/20
+ event: 3750/25000	run: 7/20
+ event: 5000/25000	run: 7/20
+ event: 6250/25000	run: 7/20
+ event: 7500/25000	run: 7/20
+ event: 8750/25000	run: 7/20
+ event: 10000/25000	run: 7/20
+ event: 11250/25000	run: 7/20
+ event: 12500/25000	run: 7/20
+ event: 13750/25000	run: 7/20
+ event: 15000/25000	run: 7/20
+ event: 16250/25000	run: 7/20
+ event: 17500/25000	run: 7/20
+ event: 18750/25000	run: 7/20
+ event: 20000/25000	run: 7/20
+ event: 21250/25000	run: 7/20
+ event: 22500/25000	run: 7/20
+ event: 23750/25000	run: 7/20
+ event: 25000/25000	run: 7/20
+   -----            
+nevts:              25000
+evtmult:            6564
+ncount (HFm):       5703000
+ncount (HFp):       5698763
+   -----            
+HFm mult:           721
+trackm mult:        229
+trackmid mult:      474
+trackp mult:        245
+HFp mult:           698
+particles rejected: 4671
+   -----            
+rescor1_2:          0.211971
+rescor1_3    (HFm): 0.203651	 (HFp): 0.200647
+rescor2_2:          0.913265
+rescor2_3    (HFm): 0.914322	 (HFp): 0.914322
+rescorMix    (HFm): 0.207103	 (HFp): 0.207103
+epv1obs      (HFm): 0.002873	 (HFp): -0.002727
+epv1obs_mix  (HFm): 0.000198	 (HFp): -0.000455
+epv2obs      (HFm): 0.063945	 (HFp): 0.064353
+   -----            
+spdenom1_2SE:       0.018788
+spdenom1_3SE (HFm): 0.017641	 (HFp): 0.017603
+spdenom2_2SE:       0.070115
+spdenom2_3SE (HFm): 0.070158	 (HFp): 0.070158
+spdenom_mix  (HFm): 0.001371	 (HFp): 0.001371
+spv1num      (HFm): -0.000250	 (HFp): 0.000250
+spv2num      (HFm): 0.004909	 (HFp): 0.004936
+spv1num_mix  (HFm): -0.000003	 (HFp): 0.000004
+   -----               
+epv1_2SE     (HFm): 0.013555	 (HFp): -0.012866
+epv1_3SE     (HFm): 0.014109	 (HFp): -0.013592
+epv1_mix     (HFm): 0.000954	 (HFp): -0.002197
+   -----            
+spv1_2SE     (HFm): -0.013315	 (HFp): 0.013289
+spv1_3SE     (HFm): -0.014180	 (HFp): 0.014184
+spv1_mix     (HFm): -0.001965	 (HFp): 0.003094
+   -----            
+epv2_2SE     (HFm): 0.070018	 (HFp): 0.070465
+epv2_3SE     (HFm): 0.069937	 (HFp): 0.070383
+spv2_2SE     (HFm): 0.070006	 (HFp): 0.070394
+spv2_3SE     (HFm): 0.069963	 (HFp): 0.070351
+   -----          
+
+Entering primary event loop
+ event: 1250/25000	run: 8/20
+ event: 2500/25000	run: 8/20
+ event: 3750/25000	run: 8/20
+ event: 5000/25000	run: 8/20
+ event: 6250/25000	run: 8/20
+ event: 7500/25000	run: 8/20
+ event: 8750/25000	run: 8/20
+ event: 10000/25000	run: 8/20
+ event: 11250/25000	run: 8/20
+ event: 12500/25000	run: 8/20
+ event: 13750/25000	run: 8/20
+ event: 15000/25000	run: 8/20
+ event: 16250/25000	run: 8/20
+ event: 17500/25000	run: 8/20
+ event: 18750/25000	run: 8/20
+ event: 20000/25000	run: 8/20
+ event: 21250/25000	run: 8/20
+ event: 22500/25000	run: 8/20
+ event: 23750/25000	run: 8/20
+ event: 25000/25000	run: 8/20
+   -----            
+nevts:              25000
+evtmult:            6564
+ncount (HFm):       5700126
+ncount (HFp):       5703197
+   -----            
+HFm mult:           707
+trackm mult:        228
+trackmid mult:      441
+trackp mult:        213
+HFp mult:           684
+particles rejected: 4732
+   -----            
+rescor1_2:          0.205283
+rescor1_3    (HFm): 0.179620	 (HFp): 0.200027
+rescor2_2:          0.913444
+rescor2_3    (HFm): 0.914951	 (HFp): 0.914951
+rescorMix    (HFm): 0.186118	 (HFp): 0.186118
+epv1obs      (HFm): 0.002846	 (HFp): -0.002793
+epv1obs_mix  (HFm): 0.000435	 (HFp): -0.000041
+epv2obs      (HFm): 0.063884	 (HFp): 0.064386
+   -----            
+spdenom1_2SE:       0.018156
+spdenom1_3SE (HFm): 0.016514	 (HFp): 0.017462
+spdenom2_2SE:       0.069930
+spdenom2_3SE (HFm): 0.069862	 (HFp): 0.069862
+spdenom_mix  (HFm): 0.001271	 (HFp): 0.001271
+spv1num      (HFm): -0.000253	 (HFp): 0.000245
+spv2num      (HFm): 0.004881	 (HFp): 0.004920
+spv1num_mix  (HFm): -0.000003	 (HFp): 0.000000
+   -----               
+epv1_2SE     (HFm): 0.013862	 (HFp): -0.013607
+epv1_3SE     (HFm): 0.015843	 (HFp): -0.013964
+epv1_mix     (HFm): 0.002336	 (HFp): -0.000221
+   -----            
+spv1_2SE     (HFm): -0.013942	 (HFp): 0.013518
+spv1_3SE     (HFm): -0.015328	 (HFp): 0.014056
+spv1_mix     (HFm): -0.002503	 (HFp): 0.000385
+   -----            
+epv2_2SE     (HFm): 0.069937	 (HFp): 0.070487
+epv2_3SE     (HFm): 0.069822	 (HFp): 0.070371
+spv2_2SE     (HFm): 0.069795	 (HFp): 0.070360
+spv2_3SE     (HFm): 0.069863	 (HFp): 0.070429
+   -----          
+
+Entering primary event loop
+ event: 1250/25000	run: 9/20
+ event: 2500/25000	run: 9/20
+ event: 3750/25000	run: 9/20
+ event: 5000/25000	run: 9/20
+ event: 6250/25000	run: 9/20
+ event: 7500/25000	run: 9/20
+ event: 8750/25000	run: 9/20
+ event: 10000/25000	run: 9/20
+ event: 11250/25000	run: 9/20
+ event: 12500/25000	run: 9/20
+ event: 13750/25000	run: 9/20
+ event: 15000/25000	run: 9/20
+ event: 16250/25000	run: 9/20
+ event: 17500/25000	run: 9/20
+ event: 18750/25000	run: 9/20
+ event: 20000/25000	run: 9/20
+ event: 21250/25000	run: 9/20
+ event: 22500/25000	run: 9/20
+ event: 23750/25000	run: 9/20
+ event: 25000/25000	run: 9/20
+   -----            
+nevts:              25000
+evtmult:            6564
+ncount (HFm):       5701295
+ncount (HFp):       5700467
+   -----            
+HFm mult:           680
+trackm mult:        224
+trackmid mult:      449
+trackp mult:        225
+HFp mult:           665
+particles rejected: 4770
+   -----            
+rescor1_2:          0.207952
+rescor1_3    (HFm): 0.178845	 (HFp): 0.189271
+rescor2_2:          0.913602
+rescor2_3    (HFm): 0.913528	 (HFp): 0.913528
+rescorMix    (HFm): 0.198021	 (HFp): 0.198021
+epv1obs      (HFm): 0.002953	 (HFp): -0.003117
+epv1obs_mix  (HFm): 0.000126	 (HFp): -0.000245
+epv2obs      (HFm): 0.063571	 (HFp): 0.063671
+   -----            
+spdenom1_2SE:       0.018435
+spdenom1_3SE (HFm): 0.016286	 (HFp): 0.016811
+spdenom2_2SE:       0.069974
+spdenom2_3SE (HFm): 0.069898	 (HFp): 0.069898
+spdenom_mix  (HFm): 0.001354	 (HFp): 0.001354
+spv1num      (HFm): -0.000275	 (HFp): 0.000273
+spv2num      (HFm): 0.004863	 (HFp): 0.004875
+spv1num_mix  (HFm): -0.000001	 (HFp): 0.000003
+   -----               
+epv1_2SE     (HFm): 0.014202	 (HFp): -0.014990
+epv1_3SE     (HFm): 0.016514	 (HFp): -0.016469
+epv1_mix     (HFm): 0.000638	 (HFp): -0.001237
+   -----            
+spv1_2SE     (HFm): -0.014913	 (HFp): 0.014794
+spv1_3SE     (HFm): -0.016881	 (HFp): 0.016224
+spv1_mix     (HFm): -0.000681	 (HFp): 0.001920
+   -----            
+epv2_2SE     (HFm): 0.069582	 (HFp): 0.069692
+epv2_3SE     (HFm): 0.069588	 (HFp): 0.069698
+spv2_2SE     (HFm): 0.069494	 (HFp): 0.069670
+spv2_3SE     (HFm): 0.069570	 (HFp): 0.069746
+   -----          
+
+Entering primary event loop
+ event: 1250/25000	run: 10/20
+ event: 2500/25000	run: 10/20
+ event: 3750/25000	run: 10/20
+ event: 5000/25000	run: 10/20
+ event: 6250/25000	run: 10/20
+ event: 7500/25000	run: 10/20
+ event: 8750/25000	run: 10/20
+ event: 10000/25000	run: 10/20
+ event: 11250/25000	run: 10/20
+ event: 12500/25000	run: 10/20
+ event: 13750/25000	run: 10/20
+ event: 15000/25000	run: 10/20
+ event: 16250/25000	run: 10/20
+ event: 17500/25000	run: 10/20
+ event: 18750/25000	run: 10/20
+ event: 20000/25000	run: 10/20
+ event: 21250/25000	run: 10/20
+ event: 22500/25000	run: 10/20
+ event: 23750/25000	run: 10/20
+ event: 25000/25000	run: 10/20
+   -----            
+nevts:              25000
+evtmult:            6564
+ncount (HFm):       5701579
+ncount (HFp):       5700800
+   -----            
+HFm mult:           677
+trackm mult:        224
+trackmid mult:      459
+trackp mult:        235
+HFp mult:           692
+particles rejected: 4736
+   -----            
+rescor1_2:          0.211592
+rescor1_3    (HFm): 0.208247	 (HFp): 0.211256
+rescor2_2:          0.911761
+rescor2_3    (HFm): 0.912836	 (HFp): 0.912836
+rescorMix    (HFm): 0.203542	 (HFp): 0.203542
+epv1obs      (HFm): 0.002971	 (HFp): -0.002739
+epv1obs_mix  (HFm): 0.000316	 (HFp): -0.000062
+epv2obs      (HFm): 0.063445	 (HFp): 0.064601
+   -----            
+spdenom1_2SE:       0.018990
+spdenom1_3SE (HFm): 0.018289	 (HFp): 0.019528
+spdenom2_2SE:       0.069838
+spdenom2_3SE (HFm): 0.069867	 (HFp): 0.069867
+spdenom_mix  (HFm): 0.001318	 (HFp): 0.001318
+spv1num      (HFm): -0.000257	 (HFp): 0.000248
+spv2num      (HFm): 0.004850	 (HFp): 0.004946
+spv1num_mix  (HFm): -0.000003	 (HFp): 0.000001
+   -----               
+epv1_2SE     (HFm): 0.014043	 (HFp): -0.012943
+epv1_3SE     (HFm): 0.014269	 (HFp): -0.012963
+epv1_mix     (HFm): 0.001552	 (HFp): -0.000305
+   -----            
+spv1_2SE     (HFm): -0.013526	 (HFp): 0.013060
+spv1_3SE     (HFm): -0.014044	 (HFp): 0.012700
+spv1_mix     (HFm): -0.002496	 (HFp): 0.000731
+   -----            
+epv2_2SE     (HFm): 0.069585	 (HFp): 0.070853
+epv2_3SE     (HFm): 0.069503	 (HFp): 0.070769
+spv2_2SE     (HFm): 0.069440	 (HFp): 0.070822
+spv2_3SE     (HFm): 0.069411	 (HFp): 0.070792
+   -----          
+
+Entering primary event loop
+ event: 1250/25000	run: 11/20
+ event: 2500/25000	run: 11/20
+ event: 3750/25000	run: 11/20
+ event: 5000/25000	run: 11/20
+ event: 6250/25000	run: 11/20
+ event: 7500/25000	run: 11/20
+ event: 8750/25000	run: 11/20
+ event: 10000/25000	run: 11/20
+ event: 11250/25000	run: 11/20
+ event: 12500/25000	run: 11/20
+ event: 13750/25000	run: 11/20
+ event: 15000/25000	run: 11/20
+ event: 16250/25000	run: 11/20
+ event: 17500/25000	run: 11/20
+ event: 18750/25000	run: 11/20
+ event: 20000/25000	run: 11/20
+ event: 21250/25000	run: 11/20
+ event: 22500/25000	run: 11/20
+ event: 23750/25000	run: 11/20
+ event: 25000/25000	run: 11/20
+   -----            
+nevts:              25000
+evtmult:            6564
+ncount (HFm):       5704022
+ncount (HFp):       5702137
+   -----            
+HFm mult:           693
+trackm mult:        219
+trackmid mult:      454
+trackp mult:        235
+HFp mult:           697
+particles rejected: 4720
+   -----            
+rescor1_2:          0.213302
+rescor1_3    (HFm): 0.210958	 (HFp): 0.186489
+rescor2_2:          0.912171
+rescor2_3    (HFm): 0.913384	 (HFp): 0.913384
+rescorMix    (HFm): 0.204850	 (HFp): 0.204850
+epv1obs      (HFm): 0.002905	 (HFp): -0.002863
+epv1obs_mix  (HFm): 0.000275	 (HFp): -0.000157
+epv2obs      (HFm): 0.063981	 (HFp): 0.064186
+   -----            
+spdenom1_2SE:       0.018842
+spdenom1_3SE (HFm): 0.018369	 (HFp): 0.017807
+spdenom2_2SE:       0.069891
+spdenom2_3SE (HFm): 0.069788	 (HFp): 0.069788
+spdenom_mix  (HFm): 0.001309	 (HFp): 0.001309
+spv1num      (HFm): -0.000257	 (HFp): 0.000258
+spv2num      (HFm): 0.004894	 (HFp): 0.004910
+spv1num_mix  (HFm): -0.000003	 (HFp): 0.000001
+   -----               
+epv1_2SE     (HFm): 0.013621	 (HFp): -0.013424
+epv1_3SE     (HFm): 0.013773	 (HFp): -0.015355
+epv1_mix     (HFm): 0.001343	 (HFp): -0.000768
+   -----            
+spv1_2SE     (HFm): -0.013614	 (HFp): 0.013704
+spv1_3SE     (HFm): -0.013964	 (HFp): 0.014500
+spv1_mix     (HFm): -0.002586	 (HFp): 0.000864
+   -----            
+epv2_2SE     (HFm): 0.070141	 (HFp): 0.070366
+epv2_3SE     (HFm): 0.070048	 (HFp): 0.070272
+spv2_2SE     (HFm): 0.070025	 (HFp): 0.070256
+spv2_3SE     (HFm): 0.070129	 (HFp): 0.070361
+   -----          
+
+Entering primary event loop
+ event: 1250/25000	run: 12/20
+ event: 2500/25000	run: 12/20
+ event: 3750/25000	run: 12/20
+ event: 5000/25000	run: 12/20
+ event: 6250/25000	run: 12/20
+ event: 7500/25000	run: 12/20
+ event: 8750/25000	run: 12/20
+ event: 10000/25000	run: 12/20
+ event: 11250/25000	run: 12/20
+ event: 12500/25000	run: 12/20
+ event: 13750/25000	run: 12/20
+ event: 15000/25000	run: 12/20
+ event: 16250/25000	run: 12/20
+ event: 17500/25000	run: 12/20
+ event: 18750/25000	run: 12/20
+ event: 20000/25000	run: 12/20
+ event: 21250/25000	run: 12/20
+ event: 22500/25000	run: 12/20
+ event: 23750/25000	run: 12/20
+ event: 25000/25000	run: 12/20
+   -----            
+nevts:              25000
+evtmult:            6564
+ncount (HFm):       5703454
+ncount (HFp):       5703753
+   -----            
+HFm mult:           705
+trackm mult:        227
+trackmid mult:      454
+trackp mult:        227
+HFp mult:           679
+particles rejected: 4726
+   -----            
+rescor1_2:          0.200390
+rescor1_3    (HFm): 0.189874	 (HFp): 0.198869
+rescor2_2:          0.913219
+rescor2_3    (HFm): 0.911646	 (HFp): 0.911646
+rescorMix    (HFm): 0.202064	 (HFp): 0.202064
+epv1obs      (HFm): 0.002629	 (HFp): -0.003035
+epv1obs_mix  (HFm): 0.000364	 (HFp): -0.000286
+epv2obs      (HFm): 0.063819	 (HFp): 0.064036
+   -----            
+spdenom1_2SE:       0.017994
+spdenom1_3SE (HFm): 0.017058	 (HFp): 0.017986
+spdenom2_2SE:       0.070117
+spdenom2_3SE (HFm): 0.070181	 (HFp): 0.070181
+spdenom_mix  (HFm): 0.001436	 (HFp): 0.001436
+spv1num      (HFm): -0.000245	 (HFp): 0.000267
+spv2num      (HFm): 0.004920	 (HFp): 0.004930
+spv1num_mix  (HFm): -0.000003	 (HFp): 0.000004
+   -----               
+epv1_2SE     (HFm): 0.013117	 (HFp): -0.015144
+epv1_3SE     (HFm): 0.013843	 (HFp): -0.015260
+epv1_mix     (HFm): 0.001804	 (HFp): -0.001413
+   -----            
+spv1_2SE     (HFm): -0.013601	 (HFp): 0.014817
+spv1_3SE     (HFm): -0.014347	 (HFp): 0.014824
+spv1_mix     (HFm): -0.002314	 (HFp): 0.002471
+   -----            
+epv2_2SE     (HFm): 0.069884	 (HFp): 0.070121
+epv2_3SE     (HFm): 0.070004	 (HFp): 0.070242
+spv2_2SE     (HFm): 0.070168	 (HFp): 0.070315
+spv2_3SE     (HFm): 0.070104	 (HFp): 0.070250
+   -----          
+
+Entering primary event loop
+ event: 1250/25000	run: 13/20
+ event: 2500/25000	run: 13/20
+ event: 3750/25000	run: 13/20
+ event: 5000/25000	run: 13/20
+ event: 6250/25000	run: 13/20
+ event: 7500/25000	run: 13/20
+ event: 8750/25000	run: 13/20
+ event: 10000/25000	run: 13/20
+ event: 11250/25000	run: 13/20
+ event: 12500/25000	run: 13/20
+ event: 13750/25000	run: 13/20
+ event: 15000/25000	run: 13/20
+ event: 16250/25000	run: 13/20
+ event: 17500/25000	run: 13/20
+ event: 18750/25000	run: 13/20
+ event: 20000/25000	run: 13/20
+ event: 21250/25000	run: 13/20
+ event: 22500/25000	run: 13/20
+ event: 23750/25000	run: 13/20
+ event: 25000/25000	run: 13/20
+   -----            
+nevts:              25000
+evtmult:            6564
+ncount (HFm):       5701448
+ncount (HFp):       5701854
+   -----            
+HFm mult:           659
+trackm mult:        221
+trackmid mult:      419
+trackp mult:        198
+HFp mult:           662
+particles rejected: 4824
+   -----            
+rescor1_2:          0.201263
+rescor1_3    (HFm): 0.179935	 (HFp): 0.188968
+rescor2_2:          0.911644
+rescor2_3    (HFm): 0.912533	 (HFp): 0.912533
+rescorMix    (HFm): 0.196941	 (HFp): 0.196941
+epv1obs      (HFm): 0.002843	 (HFp): -0.002912
+epv1obs_mix  (HFm): -0.000157	 (HFp): -0.000176
+epv2obs      (HFm): 0.063962	 (HFp): 0.064387
+   -----            
+spdenom1_2SE:       0.017634
+spdenom1_3SE (HFm): 0.015845	 (HFp): 0.017101
+spdenom2_2SE:       0.069842
+spdenom2_3SE (HFm): 0.069836	 (HFp): 0.069836
+spdenom_mix  (HFm): 0.001365	 (HFp): 0.001365
+spv1num      (HFm): -0.000249	 (HFp): 0.000264
+spv2num      (HFm): 0.004906	 (HFp): 0.004938
+spv1num_mix  (HFm): -0.000001	 (HFp): 0.000002
+   -----               
+epv1_2SE     (HFm): 0.014124	 (HFp): -0.014468
+epv1_3SE     (HFm): 0.015798	 (HFp): -0.015409
+epv1_mix     (HFm): -0.000797	 (HFp): -0.000893
+   -----            
+spv1_2SE     (HFm): -0.014103	 (HFp): 0.014987
+spv1_3SE     (HFm): -0.015694	 (HFp): 0.015454
+spv1_mix     (HFm): -0.000747	 (HFp): 0.001530
+   -----            
+epv2_2SE     (HFm): 0.070161	 (HFp): 0.070627
+epv2_3SE     (HFm): 0.070093	 (HFp): 0.070559
+spv2_2SE     (HFm): 0.070239	 (HFp): 0.070704
+spv2_3SE     (HFm): 0.070246	 (HFp): 0.070711
+   -----          
+
+Entering primary event loop
+ event: 1250/25000	run: 14/20
+ event: 2500/25000	run: 14/20
+ event: 3750/25000	run: 14/20
+ event: 5000/25000	run: 14/20
+ event: 6250/25000	run: 14/20
+ event: 7500/25000	run: 14/20
+ event: 8750/25000	run: 14/20
+ event: 10000/25000	run: 14/20
+ event: 11250/25000	run: 14/20
+ event: 12500/25000	run: 14/20
+ event: 13750/25000	run: 14/20
+ event: 15000/25000	run: 14/20
+ event: 16250/25000	run: 14/20
+ event: 17500/25000	run: 14/20
+ event: 18750/25000	run: 14/20
+ event: 20000/25000	run: 14/20
+ event: 21250/25000	run: 14/20
+ event: 22500/25000	run: 14/20
+ event: 23750/25000	run: 14/20
+ event: 25000/25000	run: 14/20
+   -----            
+nevts:              25000
+evtmult:            6564
+ncount (HFm):       5701207
+ncount (HFp):       5701177
+   -----            
+HFm mult:           685
+trackm mult:        230
+trackmid mult:      457
+trackp mult:        227
+HFp mult:           665
+particles rejected: 4757
+   -----            
+rescor1_2:          0.219290
+rescor1_3    (HFm): 0.220705	 (HFp): 0.202556
+rescor2_2:          0.912205
+rescor2_3    (HFm): 0.913329	 (HFp): 0.913329
+rescorMix    (HFm): 0.191566	 (HFp): 0.191566
+epv1obs      (HFm): 0.002882	 (HFp): -0.002501
+epv1obs_mix  (HFm): 0.000424	 (HFp): -0.000475
+epv2obs      (HFm): 0.064105	 (HFp): 0.063833
+   -----            
+spdenom1_2SE:       0.019415
+spdenom1_3SE (HFm): 0.019362	 (HFp): 0.018118
+spdenom2_2SE:       0.069937
+spdenom2_3SE (HFm): 0.069900	 (HFp): 0.069900
+spdenom_mix  (HFm): 0.001276	 (HFp): 0.001276
+spv1num      (HFm): -0.000249	 (HFp): 0.000223
+spv2num      (HFm): 0.004909	 (HFp): 0.004886
+spv1num_mix  (HFm): -0.000002	 (HFp): 0.000003
+   -----               
+epv1_2SE     (HFm): 0.013141	 (HFp): -0.011406
+epv1_3SE     (HFm): 0.013057	 (HFp): -0.012349
+epv1_mix     (HFm): 0.002212	 (HFp): -0.002479
+   -----            
+spv1_2SE     (HFm): -0.012844	 (HFp): 0.011503
+spv1_3SE     (HFm): -0.012879	 (HFp): 0.012326
+spv1_mix     (HFm): -0.001928	 (HFp): 0.002495
+   -----            
+epv2_2SE     (HFm): 0.070275	 (HFp): 0.069977
+epv2_3SE     (HFm): 0.070189	 (HFp): 0.069891
+spv2_2SE     (HFm): 0.070188	 (HFp): 0.069856
+spv2_3SE     (HFm): 0.070225	 (HFp): 0.069893
+   -----          
+
+Entering primary event loop
+ event: 1250/25000	run: 15/20
+ event: 2500/25000	run: 15/20
+ event: 3750/25000	run: 15/20
+ event: 5000/25000	run: 15/20
+ event: 6250/25000	run: 15/20
+ event: 7500/25000	run: 15/20
+ event: 8750/25000	run: 15/20
+ event: 10000/25000	run: 15/20
+ event: 11250/25000	run: 15/20
+ event: 12500/25000	run: 15/20
+ event: 13750/25000	run: 15/20
+ event: 15000/25000	run: 15/20
+ event: 16250/25000	run: 15/20
+ event: 17500/25000	run: 15/20
+ event: 18750/25000	run: 15/20
+ event: 20000/25000	run: 15/20
+ event: 21250/25000	run: 15/20
+ event: 22500/25000	run: 15/20
+ event: 23750/25000	run: 15/20
+ event: 25000/25000	run: 15/20
+   -----            
+nevts:              25000
+evtmult:            6564
+ncount (HFm):       5704248
+ncount (HFp):       5702364
+   -----            
+HFm mult:           710
+trackm mult:        227
+trackmid mult:      461
+trackp mult:        234
+HFp mult:           674
+particles rejected: 4719
+   -----            
+rescor1_2:          0.202741
+rescor1_3    (HFm): 0.206238	 (HFp): 0.190999
+rescor2_2:          0.913575
+rescor2_3    (HFm): 0.912145	 (HFp): 0.912145
+rescorMix    (HFm): 0.209962	 (HFp): 0.209962
+epv1obs      (HFm): 0.002714	 (HFp): -0.002707
+epv1obs_mix  (HFm): 0.000620	 (HFp): -0.000256
+epv2obs      (HFm): 0.063255	 (HFp): 0.063261
+   -----            
+spdenom1_2SE:       0.018238
+spdenom1_3SE (HFm): 0.017488	 (HFp): 0.016438
+spdenom2_2SE:       0.070011
+spdenom2_3SE (HFm): 0.069945	 (HFp): 0.069945
+spdenom_mix  (HFm): 0.001391	 (HFp): 0.001391
+spv1num      (HFm): -0.000258	 (HFp): 0.000260
+spv2num      (HFm): 0.004848	 (HFp): 0.004844
+spv1num_mix  (HFm): -0.000004	 (HFp): 0.000004
+   -----               
+epv1_2SE     (HFm): 0.013387	 (HFp): -0.013353
+epv1_3SE     (HFm): 0.013160	 (HFp): -0.014173
+epv1_mix     (HFm): 0.002952	 (HFp): -0.001220
+   -----            
+spv1_2SE     (HFm): -0.014169	 (HFp): 0.014245
+spv1_3SE     (HFm): -0.014777	 (HFp): 0.015805
+spv1_mix     (HFm): -0.003112	 (HFp): 0.002746
+   -----            
+epv2_2SE     (HFm): 0.069239	 (HFp): 0.069245
+epv2_3SE     (HFm): 0.069348	 (HFp): 0.069354
+spv2_2SE     (HFm): 0.069243	 (HFp): 0.069188
+spv2_3SE     (HFm): 0.069309	 (HFp): 0.069254
+   -----          
+
+Entering primary event loop
+ event: 1250/25000	run: 16/20
+ event: 2500/25000	run: 16/20
+ event: 3750/25000	run: 16/20
+ event: 5000/25000	run: 16/20
+ event: 6250/25000	run: 16/20
+ event: 7500/25000	run: 16/20
+ event: 8750/25000	run: 16/20
+ event: 10000/25000	run: 16/20
+ event: 11250/25000	run: 16/20
+ event: 12500/25000	run: 16/20
+ event: 13750/25000	run: 16/20
+ event: 15000/25000	run: 16/20
+ event: 16250/25000	run: 16/20
+ event: 17500/25000	run: 16/20
+ event: 18750/25000	run: 16/20
+ event: 20000/25000	run: 16/20
+ event: 21250/25000	run: 16/20
+ event: 22500/25000	run: 16/20
+ event: 23750/25000	run: 16/20
+ event: 25000/25000	run: 16/20
+   -----            
+nevts:              25000
+evtmult:            6564
+ncount (HFm):       5700764
+ncount (HFp):       5701116
+   -----            
+HFm mult:           670
+trackm mult:        233
+trackmid mult:      474
+trackp mult:        241
+HFp mult:           715
+particles rejected: 4705
+   -----            
+rescor1_2:          0.212686
+rescor1_3    (HFm): 0.219307	 (HFp): 0.215387
+rescor2_2:          0.912140
+rescor2_3    (HFm): 0.911603	 (HFp): 0.911603
+rescorMix    (HFm): 0.193453	 (HFp): 0.193453
+epv1obs      (HFm): 0.002901	 (HFp): -0.002565
+epv1obs_mix  (HFm): 0.000208	 (HFp): 0.000076
+epv2obs      (HFm): 0.064030	 (HFp): 0.063710
+   -----            
+spdenom1_2SE:       0.018829
+spdenom1_3SE (HFm): 0.018633	 (HFp): 0.018743
+spdenom2_2SE:       0.069932
+spdenom2_3SE (HFm): 0.069927	 (HFp): 0.069927
+spdenom_mix  (HFm): 0.001306	 (HFp): 0.001306
+spv1num      (HFm): -0.000261	 (HFp): 0.000236
+spv2num      (HFm): 0.004917	 (HFp): 0.004880
+spv1num_mix  (HFm): -0.000001	 (HFp): -0.000000
+   -----               
+epv1_2SE     (HFm): 0.013642	 (HFp): -0.012060
+epv1_3SE     (HFm): 0.013230	 (HFp): -0.011909
+epv1_mix     (HFm): 0.001075	 (HFp): 0.000391
+   -----            
+spv1_2SE     (HFm): -0.013874	 (HFp): 0.012537
+spv1_3SE     (HFm): -0.014020	 (HFp): 0.012594
+spv1_mix     (HFm): -0.000848	 (HFp): -0.000057
+   -----            
+epv2_2SE     (HFm): 0.070198	 (HFp): 0.069846
+epv2_3SE     (HFm): 0.070239	 (HFp): 0.069888
+spv2_2SE     (HFm): 0.070316	 (HFp): 0.069782
+spv2_3SE     (HFm): 0.070321	 (HFp): 0.069787
+   -----          
+
+Entering primary event loop
+ event: 1250/25000	run: 17/20
+ event: 2500/25000	run: 17/20
+ event: 3750/25000	run: 17/20
+ event: 5000/25000	run: 17/20
+ event: 6250/25000	run: 17/20
+ event: 7500/25000	run: 17/20
+ event: 8750/25000	run: 17/20
+ event: 10000/25000	run: 17/20
+ event: 11250/25000	run: 17/20
+ event: 12500/25000	run: 17/20
+ event: 13750/25000	run: 17/20
+ event: 15000/25000	run: 17/20
+ event: 16250/25000	run: 17/20
+ event: 17500/25000	run: 17/20
+ event: 18750/25000	run: 17/20
+ event: 20000/25000	run: 17/20
+ event: 21250/25000	run: 17/20
+ event: 22500/25000	run: 17/20
+ event: 23750/25000	run: 17/20
+ event: 25000/25000	run: 17/20
+   -----            
+nevts:              25000
+evtmult:            6564
+ncount (HFm):       5698202
+ncount (HFp):       5699662
+   -----            
+HFm mult:           691
+trackm mult:        234
+trackmid mult:      458
+trackp mult:        224
+HFp mult:           674
+particles rejected: 4741
+   -----            
+rescor1_2:          0.203866
+rescor1_3    (HFm): 0.183838	 (HFp): 0.217204
+rescor2_2:          0.913476
+rescor2_3    (HFm): 0.914378	 (HFp): 0.914378
+rescorMix    (HFm): 0.211516	 (HFp): 0.211516
+epv1obs      (HFm): 0.002523	 (HFp): -0.002917
+epv1obs_mix  (HFm): -0.000004	 (HFp): -0.000150
+epv2obs      (HFm): 0.063670	 (HFp): 0.064416
+   -----            
+spdenom1_2SE:       0.018609
+spdenom1_3SE (HFm): 0.017006	 (HFp): 0.018826
+spdenom2_2SE:       0.070009
+spdenom2_3SE (HFm): 0.070124	 (HFp): 0.070124
+spdenom_mix  (HFm): 0.001381	 (HFp): 0.001381
+spv1num      (HFm): -0.000231	 (HFp): 0.000253
+spv2num      (HFm): 0.004890	 (HFp): 0.004931
+spv1num_mix  (HFm): -0.000003	 (HFp): 0.000003
+   -----               
+epv1_2SE     (HFm): 0.012375	 (HFp): -0.014309
+epv1_3SE     (HFm): 0.013723	 (HFp): -0.013430
+epv1_mix     (HFm): -0.000017	 (HFp): -0.000711
+   -----            
+spv1_2SE     (HFm): -0.012436	 (HFp): 0.013599
+spv1_3SE     (HFm): -0.013609	 (HFp): 0.013443
+spv1_mix     (HFm): -0.001911	 (HFp): 0.001940
+   -----            
+epv2_2SE     (HFm): 0.069700	 (HFp): 0.070518
+epv2_3SE     (HFm): 0.069632	 (HFp): 0.070448
+spv2_2SE     (HFm): 0.069848	 (HFp): 0.070439
+spv2_3SE     (HFm): 0.069733	 (HFp): 0.070323
+   -----          
+
+Entering primary event loop
+ event: 1250/25000	run: 18/20
+ event: 2500/25000	run: 18/20
+ event: 3750/25000	run: 18/20
+ event: 5000/25000	run: 18/20
+ event: 6250/25000	run: 18/20
+ event: 7500/25000	run: 18/20
+ event: 8750/25000	run: 18/20
+ event: 10000/25000	run: 18/20
+ event: 11250/25000	run: 18/20
+ event: 12500/25000	run: 18/20
+ event: 13750/25000	run: 18/20
+ event: 15000/25000	run: 18/20
+ event: 16250/25000	run: 18/20
+ event: 17500/25000	run: 18/20
+ event: 18750/25000	run: 18/20
+ event: 20000/25000	run: 18/20
+ event: 21250/25000	run: 18/20
+ event: 22500/25000	run: 18/20
+ event: 23750/25000	run: 18/20
+ event: 25000/25000	run: 18/20
+   -----            
+nevts:              25000
+evtmult:            6564
+ncount (HFm):       5701390
+ncount (HFp):       5703014
+   -----            
+HFm mult:           682
+trackm mult:        222
+trackmid mult:      441
+trackp mult:        219
+HFp mult:           712
+particles rejected: 4729
+   -----            
+rescor1_2:          0.193031
+rescor1_3    (HFm): 0.191385	 (HFp): 0.197768
+rescor2_2:          0.912182
+rescor2_3    (HFm): 0.914364	 (HFp): 0.914364
+rescorMix    (HFm): 0.198544	 (HFp): 0.198544
+epv1obs      (HFm): 0.002920	 (HFp): -0.003108
+epv1obs_mix  (HFm): 0.000229	 (HFp): -0.000337
+epv2obs      (HFm): 0.064262	 (HFp): 0.063632
+   -----            
+spdenom1_2SE:       0.018084
+spdenom1_3SE (HFm): 0.018148	 (HFp): 0.017909
+spdenom2_2SE:       0.069892
+spdenom2_3SE (HFm): 0.070251	 (HFp): 0.070251
+spdenom_mix  (HFm): 0.001273	 (HFp): 0.001273
+spv1num      (HFm): -0.000258	 (HFp): 0.000268
+spv2num      (HFm): 0.004948	 (HFp): 0.004892
+spv1num_mix  (HFm): -0.000003	 (HFp): 0.000004
+   -----               
+epv1_2SE     (HFm): 0.015129	 (HFp): -0.016100
+epv1_3SE     (HFm): 0.015259	 (HFp): -0.015714
+epv1_mix     (HFm): 0.001155	 (HFp): -0.001699
+   -----            
+spv1_2SE     (HFm): -0.014279	 (HFp): 0.014818
+spv1_3SE     (HFm): -0.014228	 (HFp): 0.014963
+spv1_mix     (HFm): -0.002260	 (HFp): 0.003224
+   -----            
+epv2_2SE     (HFm): 0.070449	 (HFp): 0.069758
+epv2_3SE     (HFm): 0.070281	 (HFp): 0.069591
+spv2_2SE     (HFm): 0.070796	 (HFp): 0.069998
+spv2_3SE     (HFm): 0.070434	 (HFp): 0.069640
+   -----          
+
+Entering primary event loop
+ event: 1250/25000	run: 19/20
+ event: 2500/25000	run: 19/20
+ event: 3750/25000	run: 19/20
+ event: 5000/25000	run: 19/20
+ event: 6250/25000	run: 19/20
+ event: 7500/25000	run: 19/20
+ event: 8750/25000	run: 19/20
+ event: 10000/25000	run: 19/20
+ event: 11250/25000	run: 19/20
+ event: 12500/25000	run: 19/20
+ event: 13750/25000	run: 19/20
+ event: 15000/25000	run: 19/20
+ event: 16250/25000	run: 19/20
+ event: 17500/25000	run: 19/20
+ event: 18750/25000	run: 19/20
+ event: 20000/25000	run: 19/20
+ event: 21250/25000	run: 19/20
+ event: 22500/25000	run: 19/20
+ event: 23750/25000	run: 19/20
+ event: 25000/25000	run: 19/20
+   -----            
+nevts:              25000
+evtmult:            6564
+ncount (HFm):       5701106
+ncount (HFp):       5700517
+   -----            
+HFm mult:           694
+trackm mult:        232
+trackmid mult:      449
+trackp mult:        217
+HFp mult:           699
+particles rejected: 4722
+   -----            
+rescor1_2:          0.213289
+rescor1_3    (HFm): 0.193255	 (HFp): 0.207680
+rescor2_2:          0.912164
+rescor2_3    (HFm): 0.912437	 (HFp): 0.912437
+rescorMix    (HFm): 0.177494	 (HFp): 0.177494
+epv1obs      (HFm): 0.002897	 (HFp): -0.002970
+epv1obs_mix  (HFm): 0.000132	 (HFp): -0.000153
+epv2obs      (HFm): 0.063055	 (HFp): 0.064036
+   -----            
+spdenom1_2SE:       0.019176
+spdenom1_3SE (HFm): 0.018174	 (HFp): 0.018809
+spdenom2_2SE:       0.069872
+spdenom2_3SE (HFm): 0.069697	 (HFp): 0.069697
+spdenom_mix  (HFm): 0.001222	 (HFp): 0.001222
+spv1num      (HFm): -0.000256	 (HFp): 0.000279
+spv2num      (HFm): 0.004821	 (HFp): 0.004902
+spv1num_mix  (HFm): -0.000001	 (HFp): 0.000003
+   -----               
+epv1_2SE     (HFm): 0.013581	 (HFp): -0.013927
+epv1_3SE     (HFm): 0.014988	 (HFp): -0.014303
+epv1_mix     (HFm): 0.000745	 (HFp): -0.000862
+   -----            
+spv1_2SE     (HFm): -0.013352	 (HFp): 0.014563
+spv1_3SE     (HFm): -0.014088	 (HFp): 0.014848
+spv1_mix     (HFm): -0.001083	 (HFp): 0.002109
+   -----            
+epv2_2SE     (HFm): 0.069127	 (HFp): 0.070202
+epv2_3SE     (HFm): 0.069106	 (HFp): 0.070181
+spv2_2SE     (HFm): 0.068992	 (HFp): 0.070149
+spv2_3SE     (HFm): 0.069166	 (HFp): 0.070326
+   -----          
+
+Entering primary event loop
+ event: 1250/25000	run: 20/20
+ event: 2500/25000	run: 20/20
+ event: 3750/25000	run: 20/20
+ event: 5000/25000	run: 20/20
+ event: 6250/25000	run: 20/20
+ event: 7500/25000	run: 20/20
+ event: 8750/25000	run: 20/20
+ event: 10000/25000	run: 20/20
+ event: 11250/25000	run: 20/20
+ event: 12500/25000	run: 20/20
+ event: 13750/25000	run: 20/20
+ event: 15000/25000	run: 20/20
+ event: 16250/25000	run: 20/20
+ event: 17500/25000	run: 20/20
+ event: 18750/25000	run: 20/20
+ event: 20000/25000	run: 20/20
+ event: 21250/25000	run: 20/20
+ event: 22500/25000	run: 20/20
+ event: 23750/25000	run: 20/20
+ event: 25000/25000	run: 20/20
+   -----            
+nevts:              25000
+evtmult:            6564
+ncount (HFm):       5700399
+ncount (HFp):       5703541
+   -----            
+HFm mult:           677
+trackm mult:        240
+trackmid mult:      456
+trackp mult:        216
+HFp mult:           693
+particles rejected: 4738
+   -----            
+rescor1_2:          0.212132
+rescor1_3    (HFm): 0.205530	 (HFp): 0.180942
+rescor2_2:          0.913571
+rescor2_3    (HFm): 0.913406	 (HFp): 0.913406
+rescorMix    (HFm): 0.199369	 (HFp): 0.199369
+epv1obs      (HFm): 0.003150	 (HFp): -0.002841
+epv1obs_mix  (HFm): 0.000020	 (HFp): -0.000137
+epv2obs      (HFm): 0.063612	 (HFp): 0.063842
+   -----            
+spdenom1_2SE:       0.019003
+spdenom1_3SE (HFm): 0.019315	 (HFp): 0.017016
+spdenom2_2SE:       0.069939
+spdenom2_3SE (HFm): 0.069661	 (HFp): 0.069661
+spdenom_mix  (HFm): 0.001365	 (HFp): 0.001365
+spv1num      (HFm): -0.000278	 (HFp): 0.000252
+spv2num      (HFm): 0.004849	 (HFp): 0.004875
+spv1num_mix  (HFm): -0.000002	 (HFp): 0.000001
+   -----               
+epv1_2SE     (HFm): 0.014849	 (HFp): -0.013393
+epv1_3SE     (HFm): 0.015326	 (HFp): -0.015701
+epv1_mix     (HFm): 0.000100	 (HFp): -0.000686
+   -----            
+spv1_2SE     (HFm): -0.014629	 (HFp): 0.013257
+spv1_3SE     (HFm): -0.014392	 (HFp): 0.014805
+spv1_mix     (HFm): -0.001594	 (HFp): 0.000893
+   -----            
+epv2_2SE     (HFm): 0.069630	 (HFp): 0.069882
+epv2_3SE     (HFm): 0.069643	 (HFp): 0.069895
+spv2_2SE     (HFm): 0.069332	 (HFp): 0.069709
+spv2_3SE     (HFm): 0.069609	 (HFp): 0.069988
+   -----          
+
+
+  ---- Final Tally (HFm) ---- 
+
+rescor1_2SE:     0.20675 +/- 0.00155
+rescor1_3SE:     0.19804 +/- 0.00311
+rescor2_2SE:     0.91275 +/-0.00014
+rescor2_2SE:     0.91294 +/- 0.00023
+rescor_Mix:      0.19885 +/- 0.00185
+EPv1obs:         0.00284 +/- 0.00003
+EPv2obs:         0.06375 +/- 0.00007
+EPv1obs_mix:     0.00022 +/- 0.00004
+   -----         
+SPdenom1_2SE:    0.01861 +/- 0.00011
+SPdenom1_3SE:    0.01781 +/- 0.00023
+SPdenom2_2SE:    0.06997 +/- 0.00002
+SPdenom2_3SE:    0.06996 +/- 0.00004
+SPdenom1_mix:    0.00133 +/- 0.00001
+SPv1num:         -0.00025 +/- 0.00000
+SPv2num:         0.00489 +/- 0.00001
+SPv1numMix:      -0.00000 +/- 0.00000
+   -----         
+EPv1_2SE:        0.01374 +/- 0.00016
+EPv1_3SE:        0.01439 +/- 0.00026
+EPv1_mix:        0.00112 +/- 0.00021
+   -----         
+SPv1_2SE:        -0.01368 +/- 0.00016
+SPv1_3SE:        -0.01433 +/- 0.00022
+SPv1_mix:        -0.00172 +/- 0.00018
+   -----         
+EPv2_2SE:        0.06985 +/- 0.00008
+EPv2_3SE:        0.06983 +/- 0.00008
+SPv2_2SE:        0.06983 +/- 0.00010
+SPv2_3SE:        0.06984 +/- 0.00009
+
+  ---- Final Tally (HFp) ---- 
+
+rescor1_2SE:    0.20675 +/- 0.00155
+rescor1_3SE:    0.19838 +/- 0.00262
+rescor2_2SE:    0.91275 +/-0.00014
+rescor2_2SE:    0.91294 +/- 0.00023
+rescor_mix:     0.19885 +/- 0.00185
+EPv1obs:        -0.00285 +/- 0.00004
+EPv2obs:        0.06398 +/- 0.00007
+EPv1obsMix:     -0.00024 +/- 0.00003
+   -----        
+SPdenom1_2SE:   0.01861 +/- 0.00011
+SPdenom1_3SE:   0.01784 +/- 0.00020
+SPdenom2_2SE:   0.06997 +/- 0.00002
+SPdenom2_3SE:   0.06996 +/- 0.00004
+SPdenom_mix:    0.00133 +/- 0.00001
+SPv1num:        0.00026 +/- 0.00000
+SPv2num:        0.00490 +/- 0.00001
+SPv1numMix:     0.00000 +/- 0.00000
+   -----        
+EPv1_2SE:       -0.01379 +/- 0.00023
+EPv1_3SE:       -0.01440 +/- 0.00027
+EPv1_mix:       -0.00120 +/- 0.00017
+   -----        
+SPv1_2SE:       0.01376 +/- 0.00021
+SPv1_3SE:       0.01438 +/- 0.00027
+SPv1_mix:       0.00189 +/- 0.00020
+   -----        
+EPv2_2SE:       0.07009 +/- 0.00008
+EPv2_3SE:       0.07008 +/- 0.00008
+SPv2_2SE:       0.07008 +/- 0.00009
+SPv2_3SE:       0.07009 +/- 0.00008
+
+ --- Comparisons to input vn --- 
+
+EPv2_2SE/v2in  (HFm): 0.9978 +/- 0.0012	 (HFp): 1.0013 +/- 0.0012
+EPv2_3SE/v2in  (HFm): 0.9976 +/- 0.0011	 (HFp): 1.0011 +/- 0.0011
+SPv2_2SE/v2in  (HFm): 0.9976 +/- 0.0015	 (HFp): 1.0011 +/- 0.0012
+SPv2_3SE/v2in  (HFm): 0.9977 +/- 0.0013	 (HFp): 1.0013 +/- 0.0012
+
+ ...done 
+
