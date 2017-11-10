@@ -1,11 +1,12 @@
 // style.h
-// little plotting classes to make Will's life easier 
+// little plotting classes to make Will's life easier
 
 void SetTPaveTxt( TPaveText * txtemplate, int txtsize ) {
   txtemplate->SetFillColor(0);
   txtemplate->SetBorderSize(0);
   txtemplate->SetTextFont(43);
   txtemplate->SetTextSize(txtsize);
+  txtemplate->SetTextAlign(12);
 }
 
 void SetLegend( TLegend * legtemplate, int legsize ) {

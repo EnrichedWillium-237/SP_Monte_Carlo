@@ -105,8 +105,9 @@ void mixplot_odd()
     Double_t etaTrkMin = 0.;
     Double_t etaTrkMax = 0.;
 
-    TFile * tfin = new TFile("../results/results_v1_odd_v2_0.0700_eta_weights_2.0_to_2.4_1000000_evts.root");
+    //TFile * tfin = new TFile("../results/results_v1_odd_v2_0.0700_eta_weights_2.0_to_2.4_1000000_evts.root");
     //TFile * tfin = new TFile("../results/results_v1_odd_v2_0.0700_2.0_to_2.4_100000_evts.root");
+    TFile * tfin = new TFile("../results/results_v1_odd_v2_0.0700_eta_weights_-0.8_to_0.8_1000000_evts.root");
 
     //-- retrieve data from MC sample
 
@@ -165,7 +166,7 @@ void mixplot_odd()
     TString mtag = "v1";
     if (isodd) mtag+="_odd";
     else mtag+=Form("_even_%0.4f",v1in);
-    mtag+=Form("_v2_%0.4f_v3_%0.4f",v2in,v3in);
+    mtag+=Form("_v2_%0.4f_v3_%0.4f_eta_%1.1f_to_%1.1f",v2in,v3in,etaTrkMin,etaTrkMax);
     if (eta_weights) mtag+="_eta_weights";
     if (pt_weights) mtag+="_pt_weights";
     if (conserve_pT) mtag+="_momcons";
@@ -227,7 +228,7 @@ void mixplot_odd()
     txv1EP_eta_HFm_0->AddText("Event plane v_{n}");
     txv1EP_eta_HFm_0->AddText(Form("#Psi_{n}^{A}: %1.0f < #eta < %1.0f",ecutmin[0],ecutmax[0]));
     txv1EP_eta_HFm_0->AddText(Form("#Psi_{n}^{B}: %1.0f < #eta < %1.0f",ecutmin[3],ecutmax[3]));
-    txv1EP_eta_HFm_0->AddText(Form("#Psi_{n}^{C}: %1.1f < #eta < %1.1f",ecutmin[1],ecutmax[1]));
+    txv1EP_eta_HFm_0->AddText(Form("#Psi_{n}^{C}: %1.1f < #eta < %1.1f",etaTrkMin,etaTrkMax));
     txv1EP_eta_HFm_0->Draw();
 
     TPaveText * txv1EP_eta_HFm_1 = new TPaveText(0.49, 0.77, 0.69, 0.90,"NDC");
@@ -289,7 +290,7 @@ void mixplot_odd()
     txv1EP_eta_HFp_0->AddText("Event plane v_{n}");
     txv1EP_eta_HFp_0->AddText(Form("#Psi_{n}^{A}: %1.0f < #eta < %1.0f",ecutmin[3],ecutmax[3]));
     txv1EP_eta_HFp_0->AddText(Form("#Psi_{n}^{B}: %1.0f < #eta < %1.0f",ecutmin[0],ecutmax[0]));
-    txv1EP_eta_HFp_0->AddText(Form("#Psi_{n}^{C}: %1.1f < #eta < %1.1f",ecutmin[2],ecutmax[2]));
+    txv1EP_eta_HFp_0->AddText(Form("#Psi_{n}^{C}: %1.1f < #eta < %1.1f",etaTrkMin,etaTrkMax));
     txv1EP_eta_HFp_0->Draw();
 
     TPaveText * txv1EP_eta_HFp_1 = new TPaveText(0.49, 0.77, 0.69, 0.90,"NDC");
@@ -351,7 +352,7 @@ void mixplot_odd()
     txv1SP_eta_HFm_0->AddText("Scalar-product v_{n}");
     txv1SP_eta_HFm_0->AddText(Form("Q_{nA}: %1.0f < #eta < %1.0f",ecutmin[0],ecutmax[0]));
     txv1SP_eta_HFm_0->AddText(Form("Q_{nB}: %1.0f < #eta < %1.0f",ecutmin[3],ecutmax[3]));
-    txv1SP_eta_HFm_0->AddText(Form("Q_{nC}: %1.1f < #eta < %1.1f",ecutmin[1],ecutmax[1]));
+    txv1SP_eta_HFm_0->AddText(Form("Q_{nC}: %1.1f < #eta < %1.1f",etaTrkMin,etaTrkMax));
     txv1SP_eta_HFm_0->Draw();
 
     TPaveText * txv1SP_eta_HFm_1 = new TPaveText(0.49, 0.77, 0.69, 0.90,"NDC");
@@ -413,7 +414,7 @@ void mixplot_odd()
     txv1SP_eta_HFp_0->AddText("Scalar-product v_{n}");
     txv1SP_eta_HFp_0->AddText(Form("Q_{n}^{A}: %1.0f < #eta < %1.0f",ecutmin[3],ecutmax[3]));
     txv1SP_eta_HFp_0->AddText(Form("Q_{n}^{B}: %1.0f < #eta < %1.0f",ecutmin[0],ecutmax[0]));
-    txv1SP_eta_HFp_0->AddText(Form("Q_{n}^{C}: %1.1f < #eta < %1.1f",ecutmin[2],ecutmax[2]));
+    txv1SP_eta_HFp_0->AddText(Form("Q_{n}^{C}: %1.1f < #eta < %1.1f",etaTrkMin,etaTrkMax));
     txv1SP_eta_HFp_0->Draw();
 
     TPaveText * txv1SP_eta_HFp_1 = new TPaveText(0.49, 0.77, 0.69, 0.90,"NDC");

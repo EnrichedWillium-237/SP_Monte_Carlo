@@ -212,7 +212,7 @@ void mixplot_even()
     TString mtag = "v1";
     if (isodd) mtag+="_odd";
     else mtag+=Form("_even_%0.4f",v1in);
-    mtag+=Form("_v2_%0.4f_v3_%0.4f",v2in,v3in);
+    mtag+=Form("_v2_%0.4f_v3_%0.4f_eta_%1.1f_to_%1.1f",v2in,v3in,etaTrkMin,etaTrkMax);
     if (eta_weights) mtag+="_eta_weights";
     if (pt_weights) mtag+="_pt_weights";
     if (conserve_pT) mtag+="_momcons";
@@ -336,7 +336,7 @@ void mixplot_even()
     txv1EP_eta_HFp_0->AddText("Event plane v_{n}");
     txv1EP_eta_HFp_0->AddText(Form("#Psi_{n}^{A}: %1.0f < #eta < %1.0f",ecutmin[3],ecutmax[3]));
     txv1EP_eta_HFp_0->AddText(Form("#Psi_{n}^{B}: %1.0f < #eta < %1.0f",ecutmin[0],ecutmax[0]));
-    txv1EP_eta_HFp_0->AddText(Form("#Psi_{n}^{C}: %1.1f < #eta < %1.1f",ecutmin[2],ecutmax[2]));
+    txv1EP_eta_HFp_0->AddText(Form("#Psi_{n}^{C}: %1.1f < #eta < %1.1f",etaTrkMin,etaTrkMax));
     txv1EP_eta_HFp_0->Draw();
 
     TPaveText * txv1EP_eta_HFp_1 = new TPaveText(0.49, 0.77, 0.69, 0.90,"NDC");
@@ -460,7 +460,7 @@ void mixplot_even()
     txv1SP_eta_HFp_0->AddText("Scalar-product v_{n}");
     txv1SP_eta_HFp_0->AddText(Form("Q_{n}^{A}: %1.0f < #eta < %1.0f",ecutmin[3],ecutmax[3]));
     txv1SP_eta_HFp_0->AddText(Form("Q_{n}^{B}: %1.0f < #eta < %1.0f",ecutmin[0],ecutmax[0]));
-    txv1SP_eta_HFp_0->AddText(Form("Q_{n}^{C}: %1.1f < #eta < %1.1f",ecutmin[2],ecutmax[2]));
+    txv1SP_eta_HFp_0->AddText(Form("Q_{n}^{C}: %1.1f < #eta < %1.1f",etaTrkMin,etaTrkMax));
     txv1SP_eta_HFp_0->Draw();
 
     TPaveText * txv1SP_eta_HFp_1 = new TPaveText(0.49, 0.77, 0.69, 0.90,"NDC");
@@ -590,7 +590,7 @@ void mixplot_even()
     txv1EP_pt_HFp_0->AddText("Event plane v_{n}");
     txv1EP_pt_HFp_0->AddText(Form("#Psi_{n}^{A}: %1.0f < #eta  < %1.0f",ecutmin[3],ecutmax[3]));
     txv1EP_pt_HFp_0->AddText(Form("#Psi_{n}^{B}: %1.0f < #eta  < %1.0f",ecutmin[0],ecutmax[0]));
-    txv1EP_pt_HFp_0->AddText(Form("#Psi_{n}^{C}: %1.1f < #eta  < %1.1f",ecutmin[2],ecutmax[2]));
+    txv1EP_pt_HFp_0->AddText(Form("#Psi_{n}^{C}: %1.1f < #eta  < %1.1f",etaTrkMin,etaTrkMax));
     //txv1EP_pt_HFp_0->Draw();
 
     TPaveText * txv1EP_pt_HFp_1 = new TPaveText(0.49, 0.77, 0.69, 0.90,"NDC");
@@ -714,7 +714,7 @@ void mixplot_even()
     txv1SP_pt_HFp_0->AddText("Scalar-product v_{n}");
     txv1SP_pt_HFp_0->AddText(Form("Q_{n}^{A}: %1.0f < #eta  < %1.0f",ecutmin[3],ecutmax[3]));
     txv1SP_pt_HFp_0->AddText(Form("Q_{n}^{B}: %1.0f < #eta  < %1.0f",ecutmin[0],ecutmax[0]));
-    txv1SP_pt_HFp_0->AddText(Form("Q_{n}^{C}: %1.1f < #eta  < %1.1f",ecutmin[2],ecutmax[2]));
+    txv1SP_pt_HFp_0->AddText(Form("Q_{n}^{C}: %1.1f < #eta  < %1.1f",etaTrkMin,etaTrkMax));
     //txv1SP_pt_HFp_0->Draw();
 
     TPaveText * txv1SP_pt_HFp_1 = new TPaveText(0.49, 0.77, 0.69, 0.90,"NDC");
