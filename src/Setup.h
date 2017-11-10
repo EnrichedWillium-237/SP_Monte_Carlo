@@ -28,8 +28,8 @@ static const double etabins[] = {
      0.4,  0.8,  1.2,  1.6,  2.0,  2.4};
 static const Int_t numEP = 6;
 //--                             HF-  track- track+  HF+ trackmid
-static const double ecutmin[] = {-5.0, -1.6,  1.2,  3.0, -0.5};
-static const double ecutmax[] = {-3.0, -1.2,  1.6,  5.0,  0.5};
+static const double ecutmin[] = {-5.0, -2.4,  2.0,  3.0, -0.5};
+static const double ecutmax[] = {-3.0, -2.0,  2.4,  5.0,  0.5};
 static const double pcutmin[] = { 0.3,  0.3,  0.3,  0.3,  0.3};
 static const double pcutmax[] = {30.0,  3.0,  3.0, 30.0, 3.9};
 

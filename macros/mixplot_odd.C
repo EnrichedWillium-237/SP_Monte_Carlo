@@ -105,9 +105,10 @@ void mixplot_odd()
     Double_t etaTrkMin = 0.;
     Double_t etaTrkMax = 0.;
 
-    //TFile * tfin = new TFile("../results/results_v1_odd_v2_0.0700_eta_weights_2.0_to_2.4_1000000_evts.root");
-    //TFile * tfin = new TFile("../results/results_v1_odd_v2_0.0700_2.0_to_2.4_100000_evts.root");
-    TFile * tfin = new TFile("../results/results_v1_odd_v2_0.0700_eta_weights_-0.8_to_0.8_1000000_evts.root");
+    TFile * tfin = new TFile("../results/results_v1_odd_v2_0.0700_eta_weights_2.0_to_2.4_1000000_evts.root");
+    // TFile * tfin = new TFile("../results/results_v1_odd_v2_0.0700_2.0_to_2.4_100000_evts.root");
+    // TFile * tfin = new TFile("../results/results_v1_odd_v2_0.0700_eta_weights_-0.8_to_0.8_1000000_evts.root");
+    // TFile * tfin = new TFile("../results/results_v1_odd_v2_0.0700_eta_weights_1.2_to_1.6_1000000_evts.root");
 
     //-- retrieve data from MC sample
 
