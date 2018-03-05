@@ -28,10 +28,10 @@ static const double etabins[] = {
      0.4,  0.8,  1.2,  1.6,  2.0,  2.4};
 static const Int_t numEP = 6;
 //--                             HF-  track- track+  HF+ trackmid
-static const double ecutmin[] = {-5.0, -2.4,  2.0,  3.0, -0.5};
-static const double ecutmax[] = {-3.0, -2.0,  2.4,  5.0,  0.5};
+static const double ecutmin[] = {-5.0, -0.4,  0.0,  4.0, -0.5};
+static const double ecutmax[] = {-4.0,  0.0,  0.4,  5.0,  0.5};
 static const double pcutmin[] = { 0.3,  0.3,  0.3,  0.3,  0.3};
-static const double pcutmax[] = {30.0,  3.0,  3.0, 30.0, 3.9};
+static const double pcutmax[] = {30.0,  3.0,  3.0, 30.0,  3.0};
 
 static const int nv1Ebins = 28;
 static const double v1Ebins[] = {
@@ -40,12 +40,27 @@ static const double v1Ebins[] = {
      2.4,  2.8,  3.2,  3.6,  4.0,  4.4,  4.8,  5.2,  5.6};
 
 //-- The following values assume a centrality of 20-30%
+// static const double v1oddin[] = {
+    // -0.0373, -0.0324, -0.0281, -0.0232,	-0.0189, -0.0140,
+    // -0.0097, -0.0049, -0.0006,	0.0043,  0.0054,  0.0049,
+    //  0.0031,  0.0012, -0.0012, -0.0031,	-0.0049, -0.0054,
+    // -0.0043,  0.0006,  0.0049,  0.0097,	 0.0140,  0.0189,
+    //  0.0232,  0.0281,  0.0324,  0.0373};
+//-- Values assuming a linear v1odd with no turn-around behavior (no decorrelation correction)
+// static const double v1oddin[] = {
+//      0.027,  0.025,  0.023,  0.021,  0.019,  0.017,
+//      0.015,  0.013,  0.011,  0.009,  0.007,  0.005,
+//      0.003,  0.001, -0.001, -0.003, -0.005, -0.007,
+//     -0.009, -0.011, -0.013, -0.015, -0.017, -0.019,
+//     -0.021, -0.023, -0.025, -0.027};
+//-- Values assuming a linear v1odd with no turn-around behavior (decorrelation correction applied)
 static const double v1oddin[] = {
-    -0.0373, -0.0324, -0.0281, -0.0232,	-0.0189, -0.0140,
-    -0.0097, -0.0049, -0.0006,	0.0043,  0.0054,  0.0049,
-     0.0031,  0.0012, -0.0012, -0.0031,	-0.0049, -0.0054,
-    -0.0043,  0.0006,  0.0049,  0.0097,	 0.0140,  0.0189,
-     0.0232,  0.0281,  0.0324,  0.0373};
+     0.00378,  0.00350,  0.00322,  0.00294,  0.00266,  0.00238,
+     0.00210,  0.00182,  0.00154,  0.00126,  0.00098,  0.00070,
+     0.00042,  0.00014, -0.00014, -0.00042, -0.00070, -0.00098,
+    -0.00126, -0.00154, -0.00182, -0.00210, -0.00238, -0.00266,
+    -0.00294, -0.00322, -0.00350, -0.00378};
+
 static const int v1Emult[] = {
     129,  149,  170,  191,  213,  234,
     253,  270,  281,  286,  285,  280,
@@ -146,6 +161,8 @@ TH1D * hQmixABC_final[2];
 TH1D * hQmixnAC_3_final[2];
 TH1D * hQmixABC_3_final[2];
 
+TH1D * hQ1Q1Q2[2];
+
 //-- normalized Q-vector correlations
 
 TH1D * hQ1nAnorm[2][netabins];
@@ -187,6 +204,8 @@ TH1D * hQmixABCnorm_final[2];
 
 TH1D * hQmixnAC_3norm_final[2];
 TH1D * hQmixABC_3norm_final[2];
+
+TH1D * hQ1Q1Q2norm[2];
 
 //-- event plane and scalar-product vn
 
@@ -452,13 +471,13 @@ void Setup()
     for (int iside = 0; iside<2; iside++) {
         for (int ebin = 0; ebin<netabins; ebin++) {
 
-            hQ1nA[iside][ebin] = new TH1D(Form("Q1nA_%s_%d",SideName[iside].data(),ebin), "", 150, -1e-3, 1e-3);
+            hQ1nA[iside][ebin] = new TH1D(Form("Q1nA_%s_%d",SideName[iside].data(),ebin), "", 150, -5e-4, 5e-4);
             hQ2nA[iside][ebin] = new TH1D(Form("Q2nA_%s_%d",SideName[iside].data(),ebin), "", 150, -5e-3, 5e-3);
             hQ3nA[iside][ebin] = new TH1D(Form("Q3nA_%s_%d",SideName[iside].data(),ebin), "", 150, -5e-3, 5e-3);
             hQmixnAC[iside][ebin] = new TH1D(Form("QmixnAC_%s_%d",SideName[iside].data(),ebin), "", 150, -1e-4, 1e-4);
             hQmixnAC_3[iside][ebin] = new TH1D(Form("QmixnAC_3_%s_%d",SideName[iside].data(),ebin), "", 150, -1e-4, 1e-4);
 
-            hQ1nAnorm[iside][ebin] = new TH1D(Form("Q1nAnorm_%s_%d",SideName[iside].data(),ebin), "", 150, -1e-3, 1e-3);
+            hQ1nAnorm[iside][ebin] = new TH1D(Form("Q1nAnorm_%s_%d",SideName[iside].data(),ebin), "", 150, -5e-4, 5e-4);
             hQ2nAnorm[iside][ebin] = new TH1D(Form("Q2nAnorm_%s_%d",SideName[iside].data(),ebin), "", 150, -5e-3, 5e-3);
             hQ3nAnorm[iside][ebin] = new TH1D(Form("Q3nAnorm_%s_%d",SideName[iside].data(),ebin), "", 150, -5e-3, 5e-3);
             hQmixnACnorm[iside][ebin] = new TH1D(Form("QmixnACnorm_%s_%d",SideName[iside].data(),ebin), "", 150, -1e-4, 1e-4);
@@ -466,9 +485,9 @@ void Setup()
         }
 
         hQ1nA_final[iside] = new TH1D(Form("Q1nA_%s",SideName[iside].data()), "", netabins, etabins);
-        hQ1AB_final[iside] = new TH1D(Form("Q1AB_%s",SideName[iside].data()), "", 200, -1e-3, 1e-3);
-        hQ1AC_final[iside] = new TH1D(Form("Q1AC_%s",SideName[iside].data()), "", 200, -1e-3, 1e-3);
-        hQ1BC_final[iside] = new TH1D(Form("Q1BC_%s",SideName[iside].data()), "", 200, -1e-3, 1e-3);
+        hQ1AB_final[iside] = new TH1D(Form("Q1AB_%s",SideName[iside].data()), "", 200, -5e-4, 5e-4);
+        hQ1AC_final[iside] = new TH1D(Form("Q1AC_%s",SideName[iside].data()), "", 200, -5e-4, 5e-4);
+        hQ1BC_final[iside] = new TH1D(Form("Q1BC_%s",SideName[iside].data()), "", 200, -5e-4, 5e-4);
         hQ2AB_final[iside] = new TH1D(Form("Q2AB_%s",SideName[iside].data()), "", 200, -1e-2, 1e-2);
         hQ2AC_final[iside] = new TH1D(Form("Q2AC_%s",SideName[iside].data()), "", 200, -1e-2, 1e-2);
         hQ2BC_final[iside] = new TH1D(Form("Q2BC_%s",SideName[iside].data()), "", 200, -1e-2, 1e-2);
@@ -479,6 +498,7 @@ void Setup()
         hQmixABC_final[iside] = new TH1D(Form("QmixABC_%s",SideName[iside].data()), "", 200, -1e-4, 1e-4);
         hQmixnAC_3_final[iside] = new TH1D(Form("QmixnAC_3_final_%s",SideName[iside].data()), "", netabins, etabins);
         hQmixABC_3_final[iside] = new TH1D(Form("QmixABC_3_final_%s",SideName[iside].data()), "", 200, -1e-4, 1e-4);
+        hQ1Q1Q2[iside] = new TH1D(Form("Q1Q1Q2_%s",SideName[iside].data()), "", 200, -0.2, 0.2);
 
         hQ1nAnorm_final[iside] = new TH1D(Form("Q1nAnorm_%s",SideName[iside].data()), "", netabins, etabins);
         hQ1ABnorm_final[iside] = new TH1D(Form("Q1ABnorm_%s",SideName[iside].data()), "", 200, -0.5, 0.5);
@@ -494,6 +514,7 @@ void Setup()
         hQmixABCnorm_final[iside] = new TH1D(Form("QmixABCnorm_%s",SideName[iside].data()), "", 200, -1e-4, 1e-4);
         hQmixnAC_3norm_final[iside] = new TH1D(Form("QmixnAC_3norm_final_%s",SideName[iside].data()), "", netabins, etabins);
         hQmixABC_3norm_final[iside] = new TH1D(Form("QmixABC_3norm_final_%s",SideName[iside].data()), "", 200, -1e-4, 1e-4);
+        hQ1Q1Q2norm[iside] = new TH1D(Form("Q1Q1Q2norm_%s",SideName[iside].data()), "", 200, -0.2, 0.2);
 
         rescor1_3SE[iside] = new TH1D(Form("rescor1_3SE_%s",SideName[iside].data()), "", 200, 0, 1);
         rescor1_mix[iside] = new TH1D(Form("rescor1_mix_%s",SideName[iside].data()), "", 200, 0, 1);
@@ -800,6 +821,7 @@ void WriteToFile( TString mtag ) {
         hQmixABC_final[iside]->Write();
         hQmixnAC_3_final[iside]->Write();
         hQmixABC_3_final[iside]->Write();
+        hQ1Q1Q2[iside]->Write();
 
         tdqvecNorm_side[iside] = (TDirectory *) tdqvecNorm->mkdir(Form("%s",SideName[iside].data()));
         tdqvecNorm_side[iside]->cd();
@@ -817,6 +839,7 @@ void WriteToFile( TString mtag ) {
         hQmixABCnorm_final[iside]->Write();
         hQmixnAC_3norm_final[iside]->Write();
         hQmixABC_3norm_final[iside]->Write();
+        hQ1Q1Q2norm[iside]->Write();
 
         tdvnep_side[iside] = (TDirectory *) tdvnep->mkdir(Form("%s",SideName[iside].data()));
         tdvnep_side[iside]->cd();
@@ -1165,6 +1188,9 @@ void ComputeVN( Int_t nevents, Int_t evtmult, Bool_t isodd, Double_t setv1, Doub
     fout<<"SPv1numMix:      "<<Form("%.5f",SPv1numMix[0]->GetMean())<<" +/- "<<Form("%.5f",SPv1numMix[0]->GetMeanError())<<endl;
     fout<<"SPv1numMix_3:    "<<Form("%.5f",SPv1numMix_3[0]->GetMean())<<" +/- "<<Form("%.5f",SPv1numMix_3[0]->GetMeanError())<<endl;
     fout<<"   -----         "<<endl;
+    fout<<"Q1Q1Q2:          "<<Form("%.5f",hQ1Q1Q2[0]->GetMean())<<" +/- "<<Form("%.5f",hQ1Q1Q2[0]->GetMeanError())<<endl;
+    fout<<"Q1Q1Q2norm:      "<<Form("%.5f",hQ1Q1Q2norm[0]->GetMean())<<" +/- "<<Form("%.5f",hQ1Q1Q2norm[0]->GetMeanError())<<endl;
+    fout<<"   -----         "<<endl;
     fout<<"EPv1_2SE:        "<<Form("%.5f",EPv1_2SE[0]->GetMean())<<" +/- "<<Form("%.5f",EPv1_2SE[0]->GetMeanError())<<endl;
     fout<<"EPv1_3SE:        "<<Form("%.5f",EPv1_3SE[0]->GetMean())<<" +/- "<<Form("%.5f",EPv1_3SE[0]->GetMeanError())<<endl;
     fout<<"EPv1_mix:        "<<Form("%.5f",EPv1_mix[0]->GetMean())<<" +/- "<<Form("%.5f",EPv1_mix[0]->GetMeanError())<<endl;
@@ -1218,6 +1244,9 @@ void ComputeVN( Int_t nevents, Int_t evtmult, Bool_t isodd, Double_t setv1, Doub
     fout<<"SPv3num:         "<<Form("%.5f",SPv3num[1]->GetMean())<<" +/- "<<Form("%.5f",SPv3num[1]->GetMeanError())<<endl;
     fout<<"SPv1numMix:      "<<Form("%.5f",SPv1numMix[1]->GetMean())<<" +/- "<<Form("%.5f",SPv1numMix[1]->GetMeanError())<<endl;
     fout<<"SPv1numMix_3:    "<<Form("%.5f",SPv1numMix_3[1]->GetMean())<<" +/- "<<Form("%.5f",SPv1numMix_3[1]->GetMeanError())<<endl;
+    fout<<"   -----         "<<endl;
+    fout<<"Q1Q1Q2:          "<<Form("%.5f",hQ1Q1Q2[1]->GetMean())<<" +/- "<<Form("%.5f",hQ1Q1Q2[1]->GetMeanError())<<endl;
+    fout<<"Q1Q1Q2norm:      "<<Form("%.5f",hQ1Q1Q2norm[1]->GetMean())<<" +/- "<<Form("%.5f",hQ1Q1Q2norm[1]->GetMeanError())<<endl;
     fout<<"   -----         "<<endl;
     fout<<"EPv1_2SE:        "<<Form("%.5f",EPv1_2SE[1]->GetMean())<<" +/- "<<Form("%.5f",EPv1_2SE[1]->GetMeanError())<<endl;
     fout<<"EPv1_3SE:        "<<Form("%.5f",EPv1_3SE[1]->GetMean())<<" +/- "<<Form("%.5f",EPv1_3SE[1]->GetMeanError())<<endl;
@@ -1316,6 +1345,9 @@ void ComputeVN( Int_t nevents, Int_t evtmult, Bool_t isodd, Double_t setv1, Doub
     cout<<"SPv1numMix:      "<<Form("%.5f",SPv1numMix[0]->GetMean())<<" +/- "<<Form("%.5f",SPv1numMix[0]->GetMeanError())<<endl;
     cout<<"SPv1numMix_3:    "<<Form("%.5f",SPv1numMix_3[0]->GetMean())<<" +/- "<<Form("%.5f",SPv1numMix_3[0]->GetMeanError())<<endl;
     cout<<"   -----         "<<endl;
+    cout<<"Q1Q1Q2:          "<<Form("%.5f",hQ1Q1Q2[0]->GetMean())<<" +/- "<<Form("%.5f",hQ1Q1Q2[0]->GetMeanError())<<endl;
+    cout<<"Q1Q1Q2norm:      "<<Form("%.5f",hQ1Q1Q2norm[0]->GetMean())<<" +/- "<<Form("%.5f",hQ1Q1Q2norm[0]->GetMeanError())<<endl;
+    cout<<"   -----         "<<endl;
     cout<<"EPv1_2SE:        "<<Form("%.5f",EPv1_2SE[0]->GetMean())<<" +/- "<<Form("%.5f",EPv1_2SE[0]->GetMeanError())<<endl;
     cout<<"EPv1_3SE:        "<<Form("%.5f",EPv1_3SE[0]->GetMean())<<" +/- "<<Form("%.5f",EPv1_3SE[0]->GetMeanError())<<endl;
     cout<<"EPv1_mix:        "<<Form("%.5f",EPv1_mix[0]->GetMean())<<" +/- "<<Form("%.5f",EPv1_mix[0]->GetMeanError())<<endl;
@@ -1411,6 +1443,10 @@ void ComputeVN( Int_t nevents, Int_t evtmult, Bool_t isodd, Double_t setv1, Doub
     cout<<Form("EPv3_3SE/v3in  (HFm): %0.4f",EPv3_3SE[0]->GetMean()/v3in)<<Form(" +/- %0.4f",EPv3_3SE[0]->GetMeanError()/v3in)<<Form("\t (HFp): %0.4f",EPv3_3SE[1]->GetMean()/v3in)<<Form(" +/- %0.4f",EPv3_3SE[1]->GetMeanError()/v3in)<<endl;
     cout<<Form("SPv3_2SE/v3in  (HFm): %0.4f",SPv3_2SE[0]->GetMean()/v3in)<<Form(" +/- %0.4f",SPv3_2SE[0]->GetMeanError()/v3in)<<Form("\t (HFp): %0.4f",SPv3_2SE[1]->GetMean()/v3in)<<Form(" +/- %0.4f",SPv3_2SE[1]->GetMeanError()/v3in)<<endl;
     cout<<Form("SPv3_3SE/v3in  (HFm): %0.4f",SPv3_3SE[0]->GetMean()/v3in)<<Form(" +/- %0.4f",SPv3_3SE[0]->GetMeanError()/v3in)<<Form("\t (HFp): %0.4f",SPv3_3SE[1]->GetMean()/v3in)<<Form(" +/- %0.4f",SPv3_3SE[1]->GetMeanError()/v3in)<<endl;
+    cout<<"   -----         "<<endl;
+    double q1q1q2ave = 0.5*(hQ1Q1Q2norm[0]->GetMean() + hQ1Q1Q2norm[1]->GetMean());
+    double q1q1q2aveErr = 0.5*sqrt( pow(hQ1Q1Q2norm[0]->GetMeanError()/hQ1Q1Q2norm[0]->GetMean(),2) + pow(hQ1Q1Q2norm[1]->GetMeanError()/hQ1Q1Q2norm[1]->GetMean(),2));
+    cout<<"Q1Q1Q2norm:      "<<Form("%.5f",q1q1q2ave)<<" +/- "<<Form("%.5f",q1q1q2aveErr)<<endl;
     cout<<"\n ...done \n"<<endl;
 
 }

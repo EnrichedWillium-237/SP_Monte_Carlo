@@ -115,6 +115,9 @@ void RunCase( Int_t indx, Int_t nevents, Int_t evtmult, Bool_t v1odd, Double_t s
     Double_t spv1num_mix_3[2];
     Double_t spv1_mix_3[2];
 
+    Double_t spq1q1q2[2];
+    Double_t epq1q1q2[2];
+
     Double_t q1x[numEP];
     Double_t q1y[numEP];
     Double_t q2x[numEP];
@@ -166,6 +169,9 @@ void RunCase( Int_t indx, Int_t nevents, Int_t evtmult, Bool_t v1odd, Double_t s
     comp QmixnACnorm_3[2];
     comp QmixABCnorm_3[2];
 
+    comp q1q1q2[2];
+    comp q1q1q2norm[2];
+
     double w1nAsum[2];
     double w1ABsum[2];
     double w1ACsum[2];
@@ -182,6 +188,9 @@ void RunCase( Int_t indx, Int_t nevents, Int_t evtmult, Bool_t v1odd, Double_t s
     double wmixABCsum[2];
     double wmixnACsum_3[2];
     double wmixABCsum_3[2];
+
+    double wq1q1q2sum[2];
+    double wq1q1q2normsum[2];
 
     //-- differential v1(pT)
     Double_t epv1obs_pt[2][nptbins];
@@ -340,6 +349,12 @@ void RunCase( Int_t indx, Int_t nevents, Int_t evtmult, Bool_t v1odd, Double_t s
         wmixABCsum[iside] = 0;
         wmixnACsum_3[iside] = 0;
         wmixABCsum_3[iside] = 0;
+
+        q1q1q2[iside] = zero;
+        q1q1q2norm[iside] = zero;
+
+        wq1q1q2sum[iside] = 0;
+        wq1q1q2normsum[iside] = 0;
 
         ncount[iside] = 0;
 
@@ -883,26 +898,26 @@ void RunCase( Int_t indx, Int_t nevents, Int_t evtmult, Bool_t v1odd, Double_t s
             if (iside == 0) {
                 ep1A = 0; // Psi1A: HFm1
                 ep1B = 3; // Psi1B: HFp1
-                ep1C = 1; // Psi1C: trackm1
+                ep1C = 2; // Psi1C: trackp1
                 ep2A = 0;
                 ep2B = 3;
-                ep2C = 1;
+                ep2C = 2;
                 ep3A = 0;
                 ep3B = 3;
-                ep3C = 1;
+                ep3C = 2;
                 epPOI = 2;
             }
-            // iside = 1: A = HFp (3), B = HFm (0), C = trackp (2), POI = trackm (1)
+            // A = HFp (3), B = HFm (0), C = trackp (2), POI = trackm (1)
             if (iside == 1) {
                 ep1A = 3;
                 ep1B = 0;
-                ep1C = 2;
+                ep1C = 1;
                 ep2A = 3;
                 ep2B = 0;
-                ep2C = 2;
+                ep2C = 1;
                 ep3A = 3;
                 ep3B = 0;
-                ep3C = 2;
+                ep3C = 1;
                 epPOI = 1;
             }
 
@@ -960,6 +975,11 @@ void RunCase( Int_t indx, Int_t nevents, Int_t evtmult, Bool_t v1odd, Double_t s
             comp mixnAC_3 = Q1n * Q2A * std::conj(Q3C);
             comp mixABC_3 = Q1B * Q2A * std::conj(Q3C);
             ////
+            comp A1A1C2 = Q1C * Q1C * std::conj(Q2A);
+            wq1q1q2sum[iside] += w1[ep1C] * w1[ep1C] * w2[ep2A];
+            q1q1q2[iside] += A1A1C2;
+            comp A1A1C2norm = (Q1C/std::abs(Q1C)) * (Q1C/std::abs(Q1C)) * (std::conj(Q2A)/std::abs(Q2A));
+            q1q1q2norm[iside] += A1A1C2norm;
 
             Q1nA[iside] += nA1;
             Q1AB[iside] += AB1;
@@ -1168,6 +1188,8 @@ void RunCase( Int_t indx, Int_t nevents, Int_t evtmult, Bool_t v1odd, Double_t s
     SPdenom3HF_2SE->Fill(spdenom3HF_2SE);
 
 
+    Double_t iQ1Q1Q2[2];
+    Double_t iQ1Q1Q2norm[2];
     for (int iside = 0; iside<2; iside++) {
         double nEP1evts = (double)nevts;
         double nEP1count = (double)ncount[iside];
@@ -1215,6 +1237,13 @@ void RunCase( Int_t indx, Int_t nevents, Int_t evtmult, Bool_t v1odd, Double_t s
         double ab3sp = Q3AB[iside].real()/w3ABsum[iside];
         double ac3sp = Q3AC[iside].real()/w3ACsum[iside];
         double bc3sp = Q3BC[iside].real()/w3BCsum[iside];
+
+        double a1a1c2sp = q1q1q2[iside].real()/wq1q1q2sum[iside];
+        hQ1Q1Q2[iside]->Fill(a1a1c2sp);
+        iQ1Q1Q2[iside] = a1a1c2sp;
+        double a1a1c2ep = q1q1q2norm[iside].real()/nEP1evts;
+        hQ1Q1Q2norm[iside]->Fill(a1a1c2ep);
+        iQ1Q1Q2norm[iside] = a1a1c2ep;
 
         // Q-vector averages
         hQ1AB_final[iside]->Fill(ab1sp);
@@ -1604,6 +1633,9 @@ void RunCase( Int_t indx, Int_t nevents, Int_t evtmult, Bool_t v1odd, Double_t s
     fout<<"spv1num_mix   (HFm): "<<Form("%.6f",spv1num_mix[0])  <<"\t (HFp): "<<Form("%.6f",spv1num_mix[1])<<endl;
     fout<<"spv1num_mix_3 (HFm): "<<Form("%.6f",spv1num_mix_3[0])<<"\t (HFp): "<<Form("%.6f",spv1num_mix_3[1])<<endl;
     fout<<"   -----             "<<endl;
+    fout<<"Q1Q1Q2 (HFm):        "<<Form("%.6f",iQ1Q1Q2[0])<<"\t (HFp): "<<Form("%.6f",iQ1Q1Q2[1])<<endl;
+    fout<<"Q1Q1Q2norm (HFm):    "<<Form("%.6f",iQ1Q1Q2norm[0])<<"\t (HFp): "<<Form("%.6f",iQ1Q1Q2norm[1])<<endl;
+    fout<<"   -----             "<<endl;
     fout<<"epv1_2SE      (HFm): "<<Form("%.6f",epv1_2SE[0])     <<"\t (HFp): "<<Form("%.6f",epv1_2SE[1])<<endl;
     fout<<"epv1_3SE      (HFm): "<<Form("%.6f",epv1_3SE[0])     <<"\t (HFp): "<<Form("%.6f",epv1_3SE[1])<<endl;
     fout<<"epv1_mix      (HFm): "<<Form("%.6f",epv1_mix[0])     <<"\t (HFp): "<<Form("%.6f",epv1_mix[1])<<endl;
@@ -1666,6 +1698,9 @@ void RunCase( Int_t indx, Int_t nevents, Int_t evtmult, Bool_t v1odd, Double_t s
     cout<<"spv3num       (HFm): "<<Form("%.6f",spv3num[0])      <<"\t (HFp): "<<Form("%.6f",spv3num[1])<<endl;
     cout<<"spv1num_mix   (HFm): "<<Form("%.6f",spv1num_mix[0])  <<"\t (HFp): "<<Form("%.6f",spv1num_mix[1])<<endl;
     cout<<"spv1num_mix_3 (HFm): "<<Form("%.6f",spv1num_mix_3[0])<<"\t (HFp): "<<Form("%.6f",spv1num_mix_3[1])<<endl;
+    cout<<"   -----             "<<endl;
+    cout<<"Q1Q1Q2 (HFm):        "<<Form("%.6f",iQ1Q1Q2[0])<<"\t (HFp): "<<Form("%.6f",iQ1Q1Q2[1])<<endl;
+    cout<<"Q1Q1Q2norm (HFm):    "<<Form("%.6f",iQ1Q1Q2norm[0])<<"\t (HFp): "<<Form("%.6f",iQ1Q1Q2norm[1])<<endl;
     cout<<"   -----             "<<endl;
     cout<<"epv1_2SE      (HFm): "<<Form("%.6f",epv1_2SE[0])     <<"\t (HFp): "<<Form("%.6f",epv1_2SE[1])<<endl;
     cout<<"epv1_3SE      (HFm): "<<Form("%.6f",epv1_3SE[0])     <<"\t (HFp): "<<Form("%.6f",epv1_3SE[1])<<endl;
