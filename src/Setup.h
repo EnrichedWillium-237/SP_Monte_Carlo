@@ -1289,6 +1289,10 @@ void ComputeVN( Int_t nevents, Int_t evtmult, Bool_t isodd, Double_t setv1, Doub
     fout<<Form("EPv3_3SE/v3in  (HFm): %0.4f",EPv3_3SE[0]->GetMean()/v3in)<<Form(" +/- %0.4f",EPv3_3SE[0]->GetMeanError()/v3in)<<Form("\t (HFp): %0.4f",EPv3_3SE[1]->GetMean()/v3in)<<Form(" +/- %0.4f",EPv3_3SE[1]->GetMeanError()/v3in)<<endl;
     fout<<Form("SPv3_2SE/v3in  (HFm): %0.4f",SPv3_2SE[0]->GetMean()/v3in)<<Form(" +/- %0.4f",SPv3_2SE[0]->GetMeanError()/v3in)<<Form("\t (HFp): %0.4f",SPv3_2SE[1]->GetMean()/v3in)<<Form(" +/- %0.4f",SPv3_2SE[1]->GetMeanError()/v3in)<<endl;
     fout<<Form("SPv3_3SE/v3in  (HFm): %0.4f",SPv3_3SE[0]->GetMean()/v3in)<<Form(" +/- %0.4f",SPv3_3SE[0]->GetMeanError()/v3in)<<Form("\t (HFp): %0.4f",SPv3_3SE[1]->GetMean()/v3in)<<Form(" +/- %0.4f",SPv3_3SE[1]->GetMeanError()/v3in)<<endl;
+    fout<<"   -----        "<<endl;
+    double q1q1q2ave = 0.5*(hQ1Q1Q2norm[0]->GetMean() + hQ1Q1Q2norm[1]->GetMean());
+    double q1q1q2aveErr = 0.5*sqrt( pow(hQ1Q1Q2norm[0]->GetMeanError(),2) + pow(hQ1Q1Q2norm[1]->GetMeanError(),2) );
+    if (!isodd) cout<<"v1: "<<setv1<<"\tv2: "<<setv2<<"\tQ1Q1Q2norm:      "<<Form("%.5f",q1q1q2ave)<<" +/- "<<Form("%.5f",q1q1q2aveErr)<<endl;
     fout<<"\n ...done \n"<<endl;
     fout.close();
 
@@ -1444,9 +1448,7 @@ void ComputeVN( Int_t nevents, Int_t evtmult, Bool_t isodd, Double_t setv1, Doub
     cout<<Form("SPv3_2SE/v3in  (HFm): %0.4f",SPv3_2SE[0]->GetMean()/v3in)<<Form(" +/- %0.4f",SPv3_2SE[0]->GetMeanError()/v3in)<<Form("\t (HFp): %0.4f",SPv3_2SE[1]->GetMean()/v3in)<<Form(" +/- %0.4f",SPv3_2SE[1]->GetMeanError()/v3in)<<endl;
     cout<<Form("SPv3_3SE/v3in  (HFm): %0.4f",SPv3_3SE[0]->GetMean()/v3in)<<Form(" +/- %0.4f",SPv3_3SE[0]->GetMeanError()/v3in)<<Form("\t (HFp): %0.4f",SPv3_3SE[1]->GetMean()/v3in)<<Form(" +/- %0.4f",SPv3_3SE[1]->GetMeanError()/v3in)<<endl;
     cout<<"   -----         "<<endl;
-    double q1q1q2ave = 0.5*(hQ1Q1Q2norm[0]->GetMean() + hQ1Q1Q2norm[1]->GetMean());
-    double q1q1q2aveErr = 0.5*sqrt( pow(hQ1Q1Q2norm[0]->GetMeanError()/hQ1Q1Q2norm[0]->GetMean(),2) + pow(hQ1Q1Q2norm[1]->GetMeanError()/hQ1Q1Q2norm[1]->GetMean(),2));
-    cout<<"Q1Q1Q2norm:      "<<Form("%.5f",q1q1q2ave)<<" +/- "<<Form("%.5f",q1q1q2aveErr)<<endl;
+    if (!isodd) cout<<"v1: "<<setv1<<"\tv2: "<<setv2<<"\tQ1Q1Q2norm:      "<<Form("%.5f",q1q1q2ave)<<" +/- "<<Form("%.5f",q1q1q2aveErr)<<endl;
     cout<<"\n ...done \n"<<endl;
 
 }
