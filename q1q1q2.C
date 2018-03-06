@@ -106,7 +106,7 @@ void q1q1q2() {
     h0 = new TH1D("h0", "", 100, -0.001, 0.022);
     h0->GetYaxis()->SetRangeUser(-0.01, 0.12);
     h0->SetXTitle("Input v_{1}");
-    h0->SetYTitle("Q_{1}^{2}Q_{2}^{*}");
+    h0->SetYTitle("<Q_{1}^{2}Q_{2A}^{*}>");
     h0->GetXaxis()->CenterTitle();
     h0->GetYaxis()->CenterTitle();
     h0->GetXaxis()->SetNdivisions(509);

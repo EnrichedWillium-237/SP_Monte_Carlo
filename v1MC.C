@@ -10,7 +10,7 @@ void v1MC()
     Double_t v2in = 0.060;
     Double_t v3in = 0.030;
     Bool_t isodd = kFALSE;
-    Int_t NumEvnts = 1e4;
+    Int_t NumEvnts = 1e2;
     Bool_t eta_weights = kFALSE;
     Bool_t pt_weights = kFALSE;
     Bool_t conserve_pT = kFALSE;

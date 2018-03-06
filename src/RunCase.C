@@ -975,11 +975,18 @@ void RunCase( Int_t indx, Int_t nevents, Int_t evtmult, Bool_t v1odd, Double_t s
             comp mixnAC_3 = Q1n * Q2A * std::conj(Q3C);
             comp mixABC_3 = Q1B * Q2A * std::conj(Q3C);
             ////
-            comp A1A1C2 = Q1C * Q1C * std::conj(Q2A);
-            wq1q1q2sum[iside] += w1[ep1C] * w1[ep1C] * w2[ep2A];
+            comp A1A1C2 = Q1n * Q1n * std::conj(Q2A);
+            wq1q1q2sum[iside] += (double)qcnt[epPOI] * (double)qcnt[epPOI] * w2[ep2A];
             q1q1q2[iside] += A1A1C2;
-            comp A1A1C2norm = (Q1C/std::abs(Q1C)) * (Q1C/std::abs(Q1C)) * (std::conj(Q2A)/std::abs(Q2A));
+            comp A1A1C2norm = Q1n * Q1n * (std::conj(Q2A)/std::abs(Q2A));
+            cout<<"Q1n: "<<Q1n<<"\tQ2A: "<<Q2A<<"\t\tQ2A/abs(Q2A): "<<std::conj(Q2A)/std::abs(Q2A)<<endl;
             q1q1q2norm[iside] += A1A1C2norm;
+            ////
+            // comp A1A1C2 = Q1C * Q1C * std::conj(Q2A);
+            // wq1q1q2sum[iside] += w1[ep1C] * w1[ep1C] * w2[ep2A];
+            // q1q1q2[iside] += A1A1C2;
+            // comp A1A1C2norm = (Q1C/std::abs(Q1C)) * (Q1C/std::abs(Q1C)) * (std::conj(Q2A)/std::abs(Q2A));
+            // q1q1q2norm[iside] += A1A1C2norm;
 
             Q1nA[iside] += nA1;
             Q1AB[iside] += AB1;
@@ -1241,9 +1248,16 @@ void RunCase( Int_t indx, Int_t nevents, Int_t evtmult, Bool_t v1odd, Double_t s
         double a1a1c2sp = q1q1q2[iside].real()/wq1q1q2sum[iside];
         hQ1Q1Q2[iside]->Fill(a1a1c2sp);
         iQ1Q1Q2[iside] = a1a1c2sp;
-        double a1a1c2ep = q1q1q2norm[iside].real()/nEP1evts;
+        double a1a1c2ep = q1q1q2norm[iside].real()/nEP1count;
         hQ1Q1Q2norm[iside]->Fill(a1a1c2ep);
         iQ1Q1Q2norm[iside] = a1a1c2ep;
+        ////
+        // double a1a1c2sp = q1q1q2[iside].real()/wq1q1q2sum[iside];
+        // hQ1Q1Q2[iside]->Fill(a1a1c2sp);
+        // iQ1Q1Q2[iside] = a1a1c2sp;
+        // double a1a1c2ep = q1q1q2norm[iside].real()/nEP1evts;
+        // hQ1Q1Q2norm[iside]->Fill(a1a1c2ep);
+        // iQ1Q1Q2norm[iside] = a1a1c2ep;
 
         // Q-vector averages
         hQ1AB_final[iside]->Fill(ab1sp);

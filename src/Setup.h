@@ -498,7 +498,7 @@ void Setup()
         hQmixABC_final[iside] = new TH1D(Form("QmixABC_%s",SideName[iside].data()), "", 200, -5e-5, 5e-5);
         hQmixnAC_3_final[iside] = new TH1D(Form("QmixnAC_3_final_%s",SideName[iside].data()), "", netabins, etabins);
         hQmixABC_3_final[iside] = new TH1D(Form("QmixABC_3_final_%s",SideName[iside].data()), "", 200, -5e-5, 5e-5);
-        hQ1Q1Q2[iside] = new TH1D(Form("Q1Q1Q2_%s",SideName[iside].data()), "", 200, -0.015, 0.015);
+        hQ1Q1Q2[iside] = new TH1D(Form("Q1Q1Q2_%s",SideName[iside].data()), "", 200, -0.001, 0.001);
 
         hQ1nAnorm_final[iside] = new TH1D(Form("Q1nAnorm_%s",SideName[iside].data()), "", netabins, etabins);
         hQ1ABnorm_final[iside] = new TH1D(Form("Q1ABnorm_%s",SideName[iside].data()), "", 200, -0.1, 0.1);
@@ -1405,6 +1405,9 @@ void ComputeVN( Int_t nevents, Int_t evtmult, Bool_t isodd, Double_t setv1, Doub
     cout<<"SPv3num:         "<<Form("%.5f",SPv3num[1]->GetMean())<<" +/- "<<Form("%.5f",SPv3num[1]->GetMeanError())<<endl;
     cout<<"SPv1numMix:      "<<Form("%.5f",SPv1numMix[1]->GetMean())<<" +/- "<<Form("%.5f",SPv1numMix[1]->GetMeanError())<<endl;
     cout<<"SPv1numMix_3:    "<<Form("%.5f",SPv1numMix_3[1]->GetMean())<<" +/- "<<Form("%.5f",SPv1numMix_3[1]->GetMeanError())<<endl;
+    cout<<"   -----         "<<endl;
+    cout<<"Q1Q1Q2:          "<<Form("%.5f",hQ1Q1Q2[1]->GetMean())<<" +/- "<<Form("%.5f",hQ1Q1Q2[1]->GetMeanError())<<endl;
+    cout<<"Q1Q1Q2norm:      "<<Form("%.5f",hQ1Q1Q2norm[1]->GetMean())<<" +/- "<<Form("%.5f",hQ1Q1Q2norm[1]->GetMeanError())<<endl;
     cout<<"   -----         "<<endl;
     cout<<"EPv1_2SE:        "<<Form("%.5f",EPv1_2SE[1]->GetMean())<<" +/- "<<Form("%.5f",EPv1_2SE[1]->GetMeanError())<<endl;
     cout<<"EPv1_3SE:        "<<Form("%.5f",EPv1_3SE[1]->GetMean())<<" +/- "<<Form("%.5f",EPv1_3SE[1]->GetMeanError())<<endl;
