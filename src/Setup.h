@@ -471,39 +471,39 @@ void Setup()
     for (int iside = 0; iside<2; iside++) {
         for (int ebin = 0; ebin<netabins; ebin++) {
 
-            hQ1nA[iside][ebin] = new TH1D(Form("Q1nA_%s_%d",SideName[iside].data(),ebin), "", 150, -5e-4, 5e-4);
-            hQ2nA[iside][ebin] = new TH1D(Form("Q2nA_%s_%d",SideName[iside].data(),ebin), "", 150, -5e-3, 5e-3);
-            hQ3nA[iside][ebin] = new TH1D(Form("Q3nA_%s_%d",SideName[iside].data(),ebin), "", 150, -5e-3, 5e-3);
-            hQmixnAC[iside][ebin] = new TH1D(Form("QmixnAC_%s_%d",SideName[iside].data(),ebin), "", 150, -1e-4, 1e-4);
-            hQmixnAC_3[iside][ebin] = new TH1D(Form("QmixnAC_3_%s_%d",SideName[iside].data(),ebin), "", 150, -1e-4, 1e-4);
+            hQ1nA[iside][ebin] = new TH1D(Form("Q1nA_%s_%d",SideName[iside].data(),ebin), "", 150, -1e-4, 1e-4);
+            hQ2nA[iside][ebin] = new TH1D(Form("Q2nA_%s_%d",SideName[iside].data(),ebin), "", 150, -1e-3, 1e-3);
+            hQ3nA[iside][ebin] = new TH1D(Form("Q3nA_%s_%d",SideName[iside].data(),ebin), "", 150, -1e-3, 1e-3);
+            hQmixnAC[iside][ebin] = new TH1D(Form("QmixnAC_%s_%d",SideName[iside].data(),ebin), "", 150, -5e-5, 5e-5);
+            hQmixnAC_3[iside][ebin] = new TH1D(Form("QmixnAC_3_%s_%d",SideName[iside].data(),ebin), "", 150, -5e-5, 5e-5);
 
-            hQ1nAnorm[iside][ebin] = new TH1D(Form("Q1nAnorm_%s_%d",SideName[iside].data(),ebin), "", 150, -5e-4, 5e-4);
-            hQ2nAnorm[iside][ebin] = new TH1D(Form("Q2nAnorm_%s_%d",SideName[iside].data(),ebin), "", 150, -5e-3, 5e-3);
-            hQ3nAnorm[iside][ebin] = new TH1D(Form("Q3nAnorm_%s_%d",SideName[iside].data(),ebin), "", 150, -5e-3, 5e-3);
-            hQmixnACnorm[iside][ebin] = new TH1D(Form("QmixnACnorm_%s_%d",SideName[iside].data(),ebin), "", 150, -1e-4, 1e-4);
-            hQmixnAC_3norm[iside][ebin] = new TH1D(Form("QmixnAC_3norm_%s_%d",SideName[iside].data(),ebin), "", 150, -1e-4, 1e-4);
+            hQ1nAnorm[iside][ebin] = new TH1D(Form("Q1nAnorm_%s_%d",SideName[iside].data(),ebin), "", 150, -1e-4, 1e-4);
+            hQ2nAnorm[iside][ebin] = new TH1D(Form("Q2nAnorm_%s_%d",SideName[iside].data(),ebin), "", 150, -1e-3, 1e-3);
+            hQ3nAnorm[iside][ebin] = new TH1D(Form("Q3nAnorm_%s_%d",SideName[iside].data(),ebin), "", 150, -1e-3, 1e-3);
+            hQmixnACnorm[iside][ebin] = new TH1D(Form("QmixnACnorm_%s_%d",SideName[iside].data(),ebin), "", 150, -5e-5, 5e-5);
+            hQmixnAC_3norm[iside][ebin] = new TH1D(Form("QmixnAC_3norm_%s_%d",SideName[iside].data(),ebin), "", 150, -5e-5, 5e-5);
         }
 
         hQ1nA_final[iside] = new TH1D(Form("Q1nA_%s",SideName[iside].data()), "", netabins, etabins);
-        hQ1AB_final[iside] = new TH1D(Form("Q1AB_%s",SideName[iside].data()), "", 200, -5e-4, 5e-4);
-        hQ1AC_final[iside] = new TH1D(Form("Q1AC_%s",SideName[iside].data()), "", 200, -5e-4, 5e-4);
-        hQ1BC_final[iside] = new TH1D(Form("Q1BC_%s",SideName[iside].data()), "", 200, -5e-4, 5e-4);
-        hQ2AB_final[iside] = new TH1D(Form("Q2AB_%s",SideName[iside].data()), "", 200, -1e-2, 1e-2);
-        hQ2AC_final[iside] = new TH1D(Form("Q2AC_%s",SideName[iside].data()), "", 200, -1e-2, 1e-2);
-        hQ2BC_final[iside] = new TH1D(Form("Q2BC_%s",SideName[iside].data()), "", 200, -1e-2, 1e-2);
-        hQ3AB_final[iside] = new TH1D(Form("Q3AB_%s",SideName[iside].data()), "", 200, -1e-2, 1e-2);
-        hQ3AC_final[iside] = new TH1D(Form("Q3AC_%s",SideName[iside].data()), "", 200, -1e-2, 1e-2);
-        hQ3BC_final[iside] = new TH1D(Form("Q3BC_%s",SideName[iside].data()), "", 200, -1e-2, 1e-2);
+        hQ1AB_final[iside] = new TH1D(Form("Q1AB_%s",SideName[iside].data()), "", 200, -1e-4, 1e-4);
+        hQ1AC_final[iside] = new TH1D(Form("Q1AC_%s",SideName[iside].data()), "", 200, -1e-4, 1e-4);
+        hQ1BC_final[iside] = new TH1D(Form("Q1BC_%s",SideName[iside].data()), "", 200, -1e-4, 1e-4);
+        hQ2AB_final[iside] = new TH1D(Form("Q2AB_%s",SideName[iside].data()), "", 200, -5e-3, 5e-3);
+        hQ2AC_final[iside] = new TH1D(Form("Q2AC_%s",SideName[iside].data()), "", 200, -5e-3, 5e-3);
+        hQ2BC_final[iside] = new TH1D(Form("Q2BC_%s",SideName[iside].data()), "", 200, -5e-3, 5e-3);
+        hQ3AB_final[iside] = new TH1D(Form("Q3AB_%s",SideName[iside].data()), "", 200, -5e-3, 5e-3);
+        hQ3AC_final[iside] = new TH1D(Form("Q3AC_%s",SideName[iside].data()), "", 200, -5e-3, 5e-3);
+        hQ3BC_final[iside] = new TH1D(Form("Q3BC_%s",SideName[iside].data()), "", 200, -5e-3, 5e-3);
         hQmixnAC_final[iside] = new TH1D(Form("QmixnAC_%s",SideName[iside].data()), "", netabins, etabins);
-        hQmixABC_final[iside] = new TH1D(Form("QmixABC_%s",SideName[iside].data()), "", 200, -1e-4, 1e-4);
+        hQmixABC_final[iside] = new TH1D(Form("QmixABC_%s",SideName[iside].data()), "", 200, -5e-5, 5e-5);
         hQmixnAC_3_final[iside] = new TH1D(Form("QmixnAC_3_final_%s",SideName[iside].data()), "", netabins, etabins);
-        hQmixABC_3_final[iside] = new TH1D(Form("QmixABC_3_final_%s",SideName[iside].data()), "", 200, -1e-4, 1e-4);
-        hQ1Q1Q2[iside] = new TH1D(Form("Q1Q1Q2_%s",SideName[iside].data()), "", 200, -0.2, 0.2);
+        hQmixABC_3_final[iside] = new TH1D(Form("QmixABC_3_final_%s",SideName[iside].data()), "", 200, -5e-5, 5e-5);
+        hQ1Q1Q2[iside] = new TH1D(Form("Q1Q1Q2_%s",SideName[iside].data()), "", 200, -0.015, 0.015);
 
         hQ1nAnorm_final[iside] = new TH1D(Form("Q1nAnorm_%s",SideName[iside].data()), "", netabins, etabins);
-        hQ1ABnorm_final[iside] = new TH1D(Form("Q1ABnorm_%s",SideName[iside].data()), "", 200, -0.5, 0.5);
-        hQ1ACnorm_final[iside] = new TH1D(Form("Q1ACnorm_%s",SideName[iside].data()), "", 200, -0.5, 0.5);
-        hQ1BCnorm_final[iside] = new TH1D(Form("Q1BCnorm_%s",SideName[iside].data()), "", 200, -0.5, 0.5);
+        hQ1ABnorm_final[iside] = new TH1D(Form("Q1ABnorm_%s",SideName[iside].data()), "", 200, -0.1, 0.1);
+        hQ1ACnorm_final[iside] = new TH1D(Form("Q1ACnorm_%s",SideName[iside].data()), "", 200, -0.1, 0.1);
+        hQ1BCnorm_final[iside] = new TH1D(Form("Q1BCnorm_%s",SideName[iside].data()), "", 200, -0.1, 0.1);
         hQ2ABnorm_final[iside] = new TH1D(Form("Q2ABnorm_%s",SideName[iside].data()), "", 200, -1, 1);
         hQ2ACnorm_final[iside] = new TH1D(Form("Q2ACnorm_%s",SideName[iside].data()), "", 200, -1, 1);
         hQ2BCnorm_final[iside] = new TH1D(Form("Q2BCnorm_%s",SideName[iside].data()), "", 200, -1, 1);
@@ -511,10 +511,10 @@ void Setup()
         hQ3ACnorm_final[iside] = new TH1D(Form("Q3ACnorm_%s",SideName[iside].data()), "", 200, -1, 1);
         hQ3BCnorm_final[iside] = new TH1D(Form("Q3BCnorm_%s",SideName[iside].data()), "", 200, -1, 1);
         hQmixnACnorm_final[iside] = new TH1D(Form("QmixnACnorm_%s",SideName[iside].data()), "", netabins, etabins);
-        hQmixABCnorm_final[iside] = new TH1D(Form("QmixABCnorm_%s",SideName[iside].data()), "", 200, -1e-4, 1e-4);
+        hQmixABCnorm_final[iside] = new TH1D(Form("QmixABCnorm_%s",SideName[iside].data()), "", 200, -5e-5, 5e-5);
         hQmixnAC_3norm_final[iside] = new TH1D(Form("QmixnAC_3norm_final_%s",SideName[iside].data()), "", netabins, etabins);
-        hQmixABC_3norm_final[iside] = new TH1D(Form("QmixABC_3norm_final_%s",SideName[iside].data()), "", 200, -1e-4, 1e-4);
-        hQ1Q1Q2norm[iside] = new TH1D(Form("Q1Q1Q2norm_%s",SideName[iside].data()), "", 200, -0.2, 0.2);
+        hQmixABC_3norm_final[iside] = new TH1D(Form("QmixABC_3norm_final_%s",SideName[iside].data()), "", 200, -5e-5, 5e-5);
+        hQ1Q1Q2norm[iside] = new TH1D(Form("Q1Q1Q2norm_%s",SideName[iside].data()), "", 200, -0.12, 0.12);
 
         rescor1_3SE[iside] = new TH1D(Form("rescor1_3SE_%s",SideName[iside].data()), "", 200, 0, 1);
         rescor1_mix[iside] = new TH1D(Form("rescor1_mix_%s",SideName[iside].data()), "", 200, 0, 1);
