@@ -118,6 +118,8 @@ void RunCase( Int_t indx, Int_t nevents, Int_t evtmult, Bool_t v1odd, Double_t s
     Double_t spq1q1q2[2];
     Double_t epq1q1q2[2];
 
+    Double_t q112 = 0;
+
     Double_t q1x[numEP];
     Double_t q1y[numEP];
     Double_t q2x[numEP];
@@ -894,6 +896,7 @@ void RunCase( Int_t indx, Int_t nevents, Int_t evtmult, Bool_t v1odd, Double_t s
         int ep2A, ep2B, ep2C;
         int ep3A, ep3B, ep3C;
         int epPOI;
+        q112 += TMath::Cos(2*(Psi1[1] - Psi2[3]));
         for (int iside = 0; iside<2; iside++) {
             if (iside == 0) {
                 ep1A = 0; // Psi1A: HFm1
@@ -979,7 +982,6 @@ void RunCase( Int_t indx, Int_t nevents, Int_t evtmult, Bool_t v1odd, Double_t s
             wq1q1q2sum[iside] += (double)qcnt[epPOI] * (double)qcnt[epPOI] * w2[ep2A];
             q1q1q2[iside] += A1A1C2;
             comp A1A1C2norm = Q1n * Q1n * (std::conj(Q2A)/std::abs(Q2A));
-            cout<<"Q1n: "<<Q1n<<"\tQ2A: "<<Q2A<<"\t\tQ2A/abs(Q2A): "<<std::conj(Q2A)/std::abs(Q2A)<<endl;
             q1q1q2norm[iside] += A1A1C2norm;
             ////
             // comp A1A1C2 = Q1C * Q1C * std::conj(Q2A);
@@ -1175,6 +1177,8 @@ void RunCase( Int_t indx, Int_t nevents, Int_t evtmult, Bool_t v1odd, Double_t s
         }
         ++nevts;
     }
+    q112/=nevts;
+    hq112->Fill(q112);
 
     rescor1_2 = sqrt( fabs(Q1ABnorm[0].real())/(double)nevts );
     rescor1_2SE->Fill(rescor1_2);
@@ -1649,6 +1653,7 @@ void RunCase( Int_t indx, Int_t nevents, Int_t evtmult, Bool_t v1odd, Double_t s
     fout<<"   -----             "<<endl;
     fout<<"Q1Q1Q2 (HFm):        "<<Form("%.6f",iQ1Q1Q2[0])<<"\t (HFp): "<<Form("%.6f",iQ1Q1Q2[1])<<endl;
     fout<<"Q1Q1Q2norm (HFm):    "<<Form("%.6f",iQ1Q1Q2norm[0])<<"\t (HFp): "<<Form("%.6f",iQ1Q1Q2norm[1])<<endl;
+    fout<<"<cos2(Psi1 - Psi2)>: "<<Form("%.6f",q112)<<endl;
     fout<<"   -----             "<<endl;
     fout<<"epv1_2SE      (HFm): "<<Form("%.6f",epv1_2SE[0])     <<"\t (HFp): "<<Form("%.6f",epv1_2SE[1])<<endl;
     fout<<"epv1_3SE      (HFm): "<<Form("%.6f",epv1_3SE[0])     <<"\t (HFp): "<<Form("%.6f",epv1_3SE[1])<<endl;
@@ -1715,6 +1720,7 @@ void RunCase( Int_t indx, Int_t nevents, Int_t evtmult, Bool_t v1odd, Double_t s
     cout<<"   -----             "<<endl;
     cout<<"Q1Q1Q2 (HFm):        "<<Form("%.6f",iQ1Q1Q2[0])<<"\t (HFp): "<<Form("%.6f",iQ1Q1Q2[1])<<endl;
     cout<<"Q1Q1Q2norm (HFm):    "<<Form("%.6f",iQ1Q1Q2norm[0])<<"\t (HFp): "<<Form("%.6f",iQ1Q1Q2norm[1])<<endl;
+    cout<<"<cos2(Psi1 - Psi2)>: "<<Form("%.6f",q112)<<endl;
     cout<<"   -----             "<<endl;
     cout<<"epv1_2SE      (HFm): "<<Form("%.6f",epv1_2SE[0])     <<"\t (HFp): "<<Form("%.6f",epv1_2SE[1])<<endl;
     cout<<"epv1_3SE      (HFm): "<<Form("%.6f",epv1_3SE[0])     <<"\t (HFp): "<<Form("%.6f",epv1_3SE[1])<<endl;

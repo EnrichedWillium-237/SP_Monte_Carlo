@@ -206,6 +206,7 @@ TH1D * hQmixnAC_3norm_final[2];
 TH1D * hQmixABC_3norm_final[2];
 
 TH1D * hQ1Q1Q2norm[2];
+TH1D * hq112;
 
 //-- event plane and scalar-product vn
 
@@ -468,6 +469,7 @@ void Setup()
     SPdenom2HF_2SE = new TH1D("SPdenom2HF_2SE", "", 200, 0, 0.1);
     SPdenom3HF_2SE = new TH1D("SPdenom3HF_2SE", "", 200, 0, 0.1);
 
+    hq112 = new TH1D("q112", "", 200, -0.1, 0.2);
     for (int iside = 0; iside<2; iside++) {
         for (int ebin = 0; ebin<netabins; ebin++) {
 
@@ -840,6 +842,7 @@ void WriteToFile( TString mtag ) {
         hQmixnAC_3norm_final[iside]->Write();
         hQmixABC_3norm_final[iside]->Write();
         hQ1Q1Q2norm[iside]->Write();
+        hq112->Write();
 
         tdvnep_side[iside] = (TDirectory *) tdvnep->mkdir(Form("%s",SideName[iside].data()));
         tdvnep_side[iside]->cd();
@@ -1190,6 +1193,7 @@ void ComputeVN( Int_t nevents, Int_t evtmult, Bool_t isodd, Double_t setv1, Doub
     fout<<"   -----         "<<endl;
     fout<<"Q1Q1Q2:          "<<Form("%.5f",hQ1Q1Q2[0]->GetMean())<<" +/- "<<Form("%.5f",hQ1Q1Q2[0]->GetMeanError())<<endl;
     fout<<"Q1Q1Q2norm:      "<<Form("%.5f",hQ1Q1Q2norm[0]->GetMean())<<" +/- "<<Form("%.5f",hQ1Q1Q2norm[0]->GetMeanError())<<endl;
+    fout<<"q112:            "<<Form("%.5f",hq112->GetMean())<<" +/- "<<Form("%.5f",hq112->GetMeanError())<<endl;
     fout<<"   -----         "<<endl;
     fout<<"EPv1_2SE:        "<<Form("%.5f",EPv1_2SE[0]->GetMean())<<" +/- "<<Form("%.5f",EPv1_2SE[0]->GetMeanError())<<endl;
     fout<<"EPv1_3SE:        "<<Form("%.5f",EPv1_3SE[0]->GetMean())<<" +/- "<<Form("%.5f",EPv1_3SE[0]->GetMeanError())<<endl;
@@ -1247,6 +1251,7 @@ void ComputeVN( Int_t nevents, Int_t evtmult, Bool_t isodd, Double_t setv1, Doub
     fout<<"   -----         "<<endl;
     fout<<"Q1Q1Q2:          "<<Form("%.5f",hQ1Q1Q2[1]->GetMean())<<" +/- "<<Form("%.5f",hQ1Q1Q2[1]->GetMeanError())<<endl;
     fout<<"Q1Q1Q2norm:      "<<Form("%.5f",hQ1Q1Q2norm[1]->GetMean())<<" +/- "<<Form("%.5f",hQ1Q1Q2norm[1]->GetMeanError())<<endl;
+    fout<<"q112:            "<<Form("%.5f",hq112->GetMean())<<" +/- "<<Form("%.5f",hq112->GetMeanError())<<endl;
     fout<<"   -----         "<<endl;
     fout<<"EPv1_2SE:        "<<Form("%.5f",EPv1_2SE[1]->GetMean())<<" +/- "<<Form("%.5f",EPv1_2SE[1]->GetMeanError())<<endl;
     fout<<"EPv1_3SE:        "<<Form("%.5f",EPv1_3SE[1]->GetMean())<<" +/- "<<Form("%.5f",EPv1_3SE[1]->GetMeanError())<<endl;
@@ -1351,6 +1356,7 @@ void ComputeVN( Int_t nevents, Int_t evtmult, Bool_t isodd, Double_t setv1, Doub
     cout<<"   -----         "<<endl;
     cout<<"Q1Q1Q2:          "<<Form("%.5f",hQ1Q1Q2[0]->GetMean())<<" +/- "<<Form("%.5f",hQ1Q1Q2[0]->GetMeanError())<<endl;
     cout<<"Q1Q1Q2norm:      "<<Form("%.5f",hQ1Q1Q2norm[0]->GetMean())<<" +/- "<<Form("%.5f",hQ1Q1Q2norm[0]->GetMeanError())<<endl;
+    cout<<"q112:            "<<Form("%.5f",hq112->GetMean())<<" +/- "<<Form("%.5f",hq112->GetMeanError())<<endl;
     cout<<"   -----         "<<endl;
     cout<<"EPv1_2SE:        "<<Form("%.5f",EPv1_2SE[0]->GetMean())<<" +/- "<<Form("%.5f",EPv1_2SE[0]->GetMeanError())<<endl;
     cout<<"EPv1_3SE:        "<<Form("%.5f",EPv1_3SE[0]->GetMean())<<" +/- "<<Form("%.5f",EPv1_3SE[0]->GetMeanError())<<endl;
@@ -1408,6 +1414,7 @@ void ComputeVN( Int_t nevents, Int_t evtmult, Bool_t isodd, Double_t setv1, Doub
     cout<<"   -----         "<<endl;
     cout<<"Q1Q1Q2:          "<<Form("%.5f",hQ1Q1Q2[1]->GetMean())<<" +/- "<<Form("%.5f",hQ1Q1Q2[1]->GetMeanError())<<endl;
     cout<<"Q1Q1Q2norm:      "<<Form("%.5f",hQ1Q1Q2norm[1]->GetMean())<<" +/- "<<Form("%.5f",hQ1Q1Q2norm[1]->GetMeanError())<<endl;
+    cout<<"q112:            "<<Form("%.5f",hq112->GetMean())<<" +/- "<<Form("%.5f",hq112->GetMeanError())<<endl;
     cout<<"   -----         "<<endl;
     cout<<"EPv1_2SE:        "<<Form("%.5f",EPv1_2SE[1]->GetMean())<<" +/- "<<Form("%.5f",EPv1_2SE[1]->GetMeanError())<<endl;
     cout<<"EPv1_3SE:        "<<Form("%.5f",EPv1_3SE[1]->GetMean())<<" +/- "<<Form("%.5f",EPv1_3SE[1]->GetMeanError())<<endl;
@@ -1451,7 +1458,7 @@ void ComputeVN( Int_t nevents, Int_t evtmult, Bool_t isodd, Double_t setv1, Doub
     cout<<Form("SPv3_2SE/v3in  (HFm): %0.4f",SPv3_2SE[0]->GetMean()/v3in)<<Form(" +/- %0.4f",SPv3_2SE[0]->GetMeanError()/v3in)<<Form("\t (HFp): %0.4f",SPv3_2SE[1]->GetMean()/v3in)<<Form(" +/- %0.4f",SPv3_2SE[1]->GetMeanError()/v3in)<<endl;
     cout<<Form("SPv3_3SE/v3in  (HFm): %0.4f",SPv3_3SE[0]->GetMean()/v3in)<<Form(" +/- %0.4f",SPv3_3SE[0]->GetMeanError()/v3in)<<Form("\t (HFp): %0.4f",SPv3_3SE[1]->GetMean()/v3in)<<Form(" +/- %0.4f",SPv3_3SE[1]->GetMeanError()/v3in)<<endl;
     cout<<"   -----         "<<endl;
-    if (!isodd) cout<<"v1: "<<setv1<<"\tv2: "<<setv2<<"\tQ1Q1Q2norm:      "<<Form("%.5f",q1q1q2ave)<<" +/- "<<Form("%.5f",q1q1q2aveErr)<<endl;
+    cout<<"v1: "<<setv1<<"\tv2: "<<setv2<<"\tq112: "<<Form("%.5f",hq112->GetMean())<<" +/- "<<Form("%.5f",hq112->GetMeanError())<<endl;
     cout<<"\n ...done \n"<<endl;
 
 }

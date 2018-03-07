@@ -102,6 +102,7 @@ void MCEvent::GetStaticEta(Double_t value, Double_t etaTrackArray[]) {
 void MCEvent::GetEtaRandom(Double_t etaTrackArray[], Double_t emin, Double_t emax) {
     for(Int_t i = 0; i<mult; i++) {
         etaTrackArray[i] = dNdetadist->GetRandom(emin,emax);
+        // etaTrackArray[i] = ran->Uniform(emin,emax);
     }
 }
 
