@@ -5,10 +5,10 @@ using namespace std;
 void v1MC()
 {
     int ntries = 10;
-    Double_t v1in = 0.000;
-    Double_t v2in = 0.060;
+    Double_t v1in = 0.020;
+    Double_t v2in = 0.005;
     Bool_t isodd = kFALSE;
-    Int_t NumEvnts = 1e4;
+    Int_t NumEvnts = 1e5;
     Int_t nevents = NumEvnts/ntries;
 
     TString tag = "v1";
@@ -32,7 +32,7 @@ void v1MC()
     cout << "Running " << NumEvnts << " events over " << ntries << " runs (" << nevents << " per run) \n" << endl;
 
     hinit_v1in = new TH1D("v1in", "", nv1Ebins, v1Ebins);
-    hq112 = new TH1D("q112", "", 200, -0.1, 0.2);
+    hq112 = new TH1D("q112", "", 200, -0.1, 0.5);
 
     TStopwatch * sw0 = new TStopwatch();
     TStopwatch * sw1 = new TStopwatch();

@@ -109,7 +109,7 @@ Double_t bounds(int ord, double ang) {
 void Setup()
 {
 
-    hq112 = new TH1D("q112", "", 200, -0.1, 0.2);
+    hq112 = new TH1D("q112", "", 200, -0.05, 0.5);
 
 }
 
