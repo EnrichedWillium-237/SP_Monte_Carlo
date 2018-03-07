@@ -5,8 +5,8 @@ using namespace std;
 void v1MC()
 {
     int ntries = 10;
-    Double_t v1in = 0.020;
-    Double_t v2in = 0.005;
+    Double_t v1in = 0.063;
+    Double_t v2in = 0.010;
     Bool_t isodd = kFALSE;
     Int_t NumEvnts = 1e5;
     Int_t nevents = NumEvnts/ntries;
