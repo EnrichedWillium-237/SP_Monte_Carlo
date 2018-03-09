@@ -6,14 +6,14 @@ using namespace std;
 void v1MC()
 {
     int ntries = 10;
-    Double_t v1in = -0.0219;
+    Double_t v1in =  0.0;
     Double_t v2in =  0.1;
     Double_t v3in =  0.030;
     Bool_t isodd = kFALSE;
-    Int_t NumEvnts = 2e4;
+    Int_t NumEvnts = 1e4;
     Bool_t eta_weights = kFALSE;
     Bool_t pt_weights = kFALSE;
-    Bool_t conserve_pT = kFALSE;
+    Bool_t conserve_pT = kTRUE;
     Bool_t addholes = kFALSE;
     Bool_t flatten = kFALSE;
     Bool_t recenter = kFALSE;
