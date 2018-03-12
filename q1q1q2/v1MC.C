@@ -5,8 +5,19 @@ using namespace std;
 void v1MC()
 {
     int ntries = 10;
-    Double_t v1in = 0.015;
-    Double_t v2in = 0.010;
+    Double_t v1in = 0.0000;
+    // Double_t v2in = 0.0249; //  0-5%
+    // Double_t v2in = 0.0426; //  5-10%
+    // Double_t v2in = 0.0563; // 10-15%
+    // Double_t v2in = 0.0683; // 15-20%
+    Double_t v2in = 0.0779; // 20-25%
+    // Double_t v2in = 0.0854; // 25-30%
+    // Double_t v2in = 0.0913; // 30-35%
+    // Double_t v2in = 0.0965; // 35-40%
+    // Double_t v2in = 0.1000; // 40-50%
+    // Double_t v2in = 0.0987; // 50-60%
+    // Double_t v2in = 0.0909; // 60-70%
+
     Bool_t isodd = kFALSE;
     Int_t NumEvnts = 1e5;
     Int_t nevents = NumEvnts/ntries;
