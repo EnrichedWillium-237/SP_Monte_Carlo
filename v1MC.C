@@ -3,17 +3,25 @@
 
 using namespace std;
 
-void v1MC()
+void v1MC( Double_t setv1 = 0.01, Double_t setv2 = 0.06, Double_t setv3 = 0.03, bool odd = false, Int_t NumE = 1e4, bool eweights = false, bool pweights = false, bool mom_cons = false )
 {
     int ntries = 10;
-    Double_t v1in =  0.050;
-    Double_t v2in =  0.070;
-    Double_t v3in =  0.030;
-    Bool_t isodd = kFALSE;
-    Int_t NumEvnts = 1e3;
-    Bool_t eta_weights = kFALSE;
-    Bool_t pt_weights = kFALSE;
-    Bool_t conserve_pT = kFALSE;
+    // Double_t v1in =  0.050;
+    // Double_t v2in =  0.070;
+    // Double_t v3in =  0.030;
+    // Bool_t isodd = kFALSE;
+    // Int_t NumEvnts = 1e3;
+    // Bool_t eta_weights = kFALSE;
+    // Bool_t pt_weights = kFALSE;
+    // Bool_t conserve_pT = kFALSE;
+    Double_t v1in =  setv1;
+    Double_t v2in =  setv2;
+    Double_t v3in =  setv3;
+    Bool_t isodd = kFALSE; if (odd) isodd = kTRUE;
+    Int_t NumEvnts = NumE;
+    Bool_t eta_weights = kFALSE; if (eweights) eta_weights = kTRUE;
+    Bool_t pt_weights = kFALSE; if (pweights) pt_weights = kTRUE;
+    Bool_t conserve_pT = kFALSE; if (mom_cons) conserve_pT = kTRUE;
     Bool_t addholes = kFALSE;
     Bool_t flatten = kFALSE;
     Bool_t recenter = kFALSE;
