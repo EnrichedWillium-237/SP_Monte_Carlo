@@ -468,6 +468,9 @@ HiEvtPlaneFlatten * flat3[6];
 TF1 * fnTheory;
 
 TFile * tfout;
+TDirectory * tfoutsub;
+TDirectory * tfoutsubsub;
+TDirectory * tfoutsubsubsub;
 Int_t iseed = 0;
 Int_t counter = 0;
 
@@ -770,11 +773,44 @@ void Setup()
 }
 
 
-void WriteToFile( TString mtag ) {
+void WriteToFile( Bool_t isodd, Double_t setv1, Double_t setv2, Double_t setv3, Bool_t eta_weights, Bool_t pt_weights, Bool_t conserve_pT, Bool_t addholes, Bool_t flatten, Bool_t recenter ) {
     if (!fopen("results","r")) system("mkdir results");
-    tfout = new TFile(Form("results/results_%s.root",mtag.Data()),"recreate");
+    tfout = new TFile("results/MH_toy.root","UPDATE");
 
-    TDirectory * tdinput = (TDirectory *) tfout->mkdir("Inputs");
+    TString subname = "";
+    if (isodd) subname += "v1odd";
+    else subname += "v1even";
+    if ((tfoutsub=(TDirectory *) tfout->Get(subname.Data()))==NULL) tfoutsub = tfout->mkdir(subname.Data());
+    // tfoutsub = (TDirectory *) tfout->mkdir(Form("%s",subname.Data()));
+    tfoutsub->cd();
+    TString subsubname = "results";
+    if (eta_weights) subsubname += "_eta_weights";
+    if (pt_weights)  subsubname += "_pt_weights";
+    if (conserve_pT) subsubname += "_mom-cons";
+    if (addholes)    subsubname += "_addholes";
+    if (flatten)     subsubname += "_flatten";
+    if (recenter)    subsubname += "_recenter";
+    if ((tfoutsubsub=(TDirectory *) tfoutsub->Get(subsubname.Data()))!=NULL) {
+        cout<<subsubname<<" exists"<<endl;
+    } else {
+        tfoutsubsub = tfoutsub->mkdir(subsubname.Data());
+    }
+    // tfoutsubsub = (TDirectory *) tfoutsub->mkdir(Form("%s",subsubname.Data()));
+    tfoutsub->cd();
+    TString subsubsubname = "";
+    if (!isodd) subsubsubname += Form("v1in_%0.4f_",setv1);
+    subsubsubname += Form("v2in_%0.4f",setv2);
+    subsubsubname += Form("v3in_%0.4f",setv3);
+    if ((tfoutsubsubsub=(TDirectory *) tfoutsubsub->Get(subsubsubname.Data()))!=NULL) {
+        cout<<subsubsubname<<" exists"<<endl;
+    } else {
+        tfoutsubsubsub = tfoutsubsub->mkdir(subsubsubname.Data());
+    }
+    // tfoutsubsubsub = (TDirectory *) tfoutsubsub->mkdir(Form("%s",subsubsubname.Data()));
+    tfoutsubsubsub->cd();
+
+
+    TDirectory * tdinput = (TDirectory *) tfoutsubsubsub->mkdir("Inputs");
     tdinput->cd();
     inputParms->Write();
     hinit_v1in->Write();
@@ -818,19 +854,19 @@ void WriteToFile( TString mtag ) {
     for (int nep = 0; nep<numEP; nep++) hsub_wpt[nep]->Write();
     for (int nep = 0; nep<numEP; nep++) hsub_pt2D[nep]->Write();
 
-    TDirectory * tdqvec = (TDirectory *) tfout->mkdir("Q-Vectors");
+    TDirectory * tdqvec = (TDirectory *) tfoutsubsubsub->mkdir("Q-Vectors");
     TDirectory * tdqvec_side[2];
-    TDirectory * tdqvecNorm = (TDirectory *) tfout->mkdir("Normalized_Q-Vectors");
+    TDirectory * tdqvecNorm = (TDirectory *) tfoutsubsubsub->mkdir("Normalized_Q-Vectors");
     TDirectory * tdqvecNorm_side[2];
-    TDirectory * tdEPCorr = (TDirectory *) tfout->mkdir("EP_correlations");
-    TDirectory * tdEPCos = (TDirectory *) tfout->mkdir("EP_cosines");
-    TDirectory * tdvnep = (TDirectory *) tfout->mkdir("v1EP");
+    TDirectory * tdEPCorr = (TDirectory *) tfoutsubsubsub->mkdir("EP_correlations");
+    TDirectory * tdEPCos = (TDirectory *) tfoutsubsubsub->mkdir("EP_cosines");
+    TDirectory * tdvnep = (TDirectory *) tfoutsubsubsub->mkdir("v1EP");
     TDirectory * tdvnep_side[2];
-    TDirectory * tdvnsp = (TDirectory *) tfout->mkdir("v1SP");
+    TDirectory * tdvnsp = (TDirectory *) tfoutsubsubsub->mkdir("v1SP");
     TDirectory * tdvnsp_side[2];
-    TDirectory * tdvnDiff_pt = (TDirectory *) tfout->mkdir("vn_pt");
+    TDirectory * tdvnDiff_pt = (TDirectory *) tfoutsubsubsub->mkdir("vn_pt");
     TDirectory * tdvnDiff_pt_side[2];
-    TDirectory * tdvnDiff_eta = (TDirectory *) tfout->mkdir("vn_eta");
+    TDirectory * tdvnDiff_eta = (TDirectory *) tfoutsubsubsub->mkdir("vn_eta");
     TDirectory * tdvnDiff_eta_side[2];
 
     for (int iside = 0; iside<2; iside++) {
