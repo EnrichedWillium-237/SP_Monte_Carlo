@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void v1MC( Double_t setv1 = 0.01, Double_t setv2 = 0.06, Double_t setv3 = 0.03, bool odd = false, Int_t NumE = 1e4, bool eweights = false, bool pweights = false, bool mom_cons = false )
+void v1MC( double setv1 = 0.01, double setv2 = 0.06, double setv3 = 0.03, bool odd = false, Int_t NumE = 1e4, bool eweights = false, bool pweights = false, bool mom_cons = false )
 {
     int ntries = 10;
     // Double_t v1in =  0.050;
