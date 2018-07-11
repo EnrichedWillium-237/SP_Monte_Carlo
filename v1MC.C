@@ -11,7 +11,7 @@ void v1MC()
     Double_t v3in =  0.030;
     Bool_t isodd = kFALSE;
     Int_t NumEvnts = 1e3;
-    Bool_t eta_weights = kTRUE;
+    Bool_t eta_weights = kFALSE;
     Bool_t pt_weights = kFALSE;
     Bool_t conserve_pT = kFALSE;
     Bool_t addholes = kFALSE;
