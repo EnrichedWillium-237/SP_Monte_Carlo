@@ -800,7 +800,7 @@ void WriteToFile( Bool_t isodd, Double_t setv1, Double_t setv2, Double_t setv3, 
     TString subsubsubname = "";
     if (!isodd) subsubsubname += Form("v1in_%0.4f_",setv1);
     subsubsubname += Form("v2in_%0.4f",setv2);
-    subsubsubname += Form("v3in_%0.4f",setv3);
+    subsubsubname += Form("_v3in_%0.4f",setv3);
     if ((tfoutsubsubsub=(TDirectory *) tfoutsubsub->Get(subsubsubname.Data()))!=NULL) {
         cout<<subsubsubname<<" exists"<<endl;
     } else {

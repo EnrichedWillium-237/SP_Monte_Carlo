@@ -65,11 +65,11 @@ void v1MC( double setv1 = 0.01, double setv2 = 0.06, double setv3 = 0.03, bool o
     if (isodd) inputParms->SetBinContent(2, 1);
     inputParms->SetBinContent(3, v2in);
     inputParms->SetBinContent(4, v3in);
-    if (eta_weights)    inputParms->SetBinContent(5, 1);
-    if (pt_weights)     inputParms->SetBinContent(6, 1);
-    if (conserve_pT)    inputParms->SetBinContent(7, 1);
-    if (recenter)       inputParms->SetBinContent(8, 1);
-    if (flatten)        inputParms->SetBinContent(9, 1);
+    if (eta_weights) inputParms->SetBinContent(5, 1);
+    if (pt_weights)  inputParms->SetBinContent(6, 1);
+    if (conserve_pT) inputParms->SetBinContent(7, 1);
+    if (recenter)    inputParms->SetBinContent(8, 1);
+    if (flatten)     inputParms->SetBinContent(9, 1);
     inputParms->SetBinContent(10, ecutmin[2]);
     inputParms->SetBinContent(11, ecutmax[2]);
 
